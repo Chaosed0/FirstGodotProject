@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmxcvxux8l7al"]
+
+[ext_resource type="PackedScene" uid="uid://bgky1s0gu0vng" path="res://Assets/Game/Models/Mushroom/shroom.glb" id="1_thqf1"]
+
+[node name="shroom" instance=ExtResource("1_thqf1")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/scale = Vector3(1, 0.878331, 1)
