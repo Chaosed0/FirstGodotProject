@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://d11nd25fnn7m7"]
+
+[ext_resource type="PackedScene" uid="uid://dxrhutva3blca" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_wood_large.gltf.glb" id="1_6138h"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_h27oj"]
+[ext_resource type="PackedScene" uid="uid://dtsq5c1j3pmwb" path="res://Assets/Game/Objects/Player.tscn" id="2_tnpk0"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_ot744"]
+[ext_resource type="PackedScene" uid="uid://v2dnkebn5lci" path="res://Assets/Game/Objects/skeleton.tscn" id="5_h8gxu"]
+[ext_resource type="PackedScene" uid="uid://dfi2nypbhomk4" path="res://Assets/Game/UI/HUD.tscn" id="6_8ftj6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3cvan"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
+shape = SubResource("BoxShape3D_3cvan")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="floor_wood_large_gltf" parent="Floors" instance=ExtResource("1_6138h")]
+
+[node name="floor_wood_large_gltf3" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor_wood_large_gltf2" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor_wood_large_gltf4" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="floor_wood_large_gltf5" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="floor_wood_large_gltf6" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="floor_wood_large_gltf7" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="floor_wood_large_gltf8" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="floor_wood_large_gltf9" parent="Floors" instance=ExtResource("1_6138h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.684753, 0.541277, -0.487988, -0.0543051, 0.705636, 0.70649, 0.726749, -0.457271, 0.512581, -1.23781, 6.4025, 7.30773)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_tnpk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729645, 0)
+
+[node name="Skeleton3D" parent="Player/Pivot/shroom/Armature" index="0"]
+bones/0/position = Vector3(-1.86265e-09, -0.36787, -2.32831e-10)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 0.891506, 1)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+
+[node name="AnimationTree" parent="Player/Pivot" index="1"]
+parameters/Movement/MoveBlend/blend_amount = 0
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.408247, 0.577348, 0, 0.816493, 0.577348, -0.707107, -0.408247, 0.577348, 8, 9.72964, 8)
+script = ExtResource("2_h27oj")
+priority = 1
+follow_mode = 2
+follow_target = NodePath("../Player")
+follow_parameters/target_offset = Vector3(8, 9, 8)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+look_at_mode = 2
+look_at_target = NodePath("../Player")
+look_at_parameters/look_at_target_offset = Vector3(0, 1, 0)
+tween_parameters = null
+tween_on_load = false
+inactive_update_mode = 0
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.408247, 0.577351, 0, 0.816498, 0.577348, -0.707107, -0.408247, 0.577351, 8, 9.72964, 8)
+fov = 20.0
+size = 18.0
+
+[node name="Node" type="Node" parent="Camera"]
+script = ExtResource("3_ot744")
+
+[node name="Skeleton" parent="." instance=ExtResource("5_h8gxu")]
+transform = Transform3D(0.0506278, 0, -0.998718, 0, 1, 0, 0.998718, 0, 0.0506278, 3.63891, -9.53674e-07, 2.60777)
+
+[node name="HUD" parent="." instance=ExtResource("6_8ftj6")]
+
+[editable path="Player"]
+[editable path="Player/Pivot/shroom"]
