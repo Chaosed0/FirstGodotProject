@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfi2nypbhomk4"]
+[gd_scene load_steps=4 format=3 uid="uid://dfi2nypbhomk4"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/InteractionHud.gd" id="1_q28ff"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/StoryUI.gd" id="2_80yve"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_im3ux"]
 font_size = 32
@@ -31,3 +32,22 @@ grow_vertical = 0
 text = "[E] Interact"
 label_settings = SubResource("LabelSettings_im3ux")
 script = ExtResource("1_q28ff")
+
+[node name="Panel" type="Panel" parent="." groups=["StoryUI"]]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -467.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_80yve")

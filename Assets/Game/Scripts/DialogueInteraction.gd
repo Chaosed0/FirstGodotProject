@@ -1,7 +1,9 @@
 class_name DialogueInteraction
 extends BaseInteractionNode
 
+@export var story : InkStory
+
 func on_interact():
-    print("Begin dialogue interaction")
-    currentInteractor.stop_interacting()
-    return;
+	var storyUI : StoryUI = get_tree().get_nodes_in_group("StoryUI")[0]
+	storyUI.load_story(story)
+	return;

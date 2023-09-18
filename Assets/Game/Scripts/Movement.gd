@@ -17,7 +17,10 @@ func _physics_process(delta):
 		
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
-		look_at(direction, Vector3.UP)
+		transform.basis = Basis()
+		var angle : float = -atan2(direction.z, direction.x);
+		print(direction, angle)
+		rotate_object_local(Vector3(0,1,0), angle)
 		
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
