@@ -19,7 +19,6 @@ func _physics_process(delta):
 		direction = direction.normalized()
 		transform.basis = Basis()
 		var angle : float = -atan2(direction.z, direction.x);
-		print(direction, angle)
 		rotate_object_local(Vector3(0,1,0), angle)
 		
 	target_velocity.x = direction.x * speed

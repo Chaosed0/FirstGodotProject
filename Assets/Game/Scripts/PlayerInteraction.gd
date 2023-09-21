@@ -60,8 +60,6 @@ func begin_interacting():
 	if interactingWith != null:
 		printerr("Tried to begin interacting, but we're already interacting with %s" % interactingWith)
 		return
-	elif interactingWith == null:
-		return
 
 	interactingWith = hoveredInteractable
 	on_interaction_begin.emit(interactingWith)

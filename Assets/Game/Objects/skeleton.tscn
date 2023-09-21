@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://v2dnkebn5lci"]
+[gd_scene load_steps=6 format=3 uid="uid://v2dnkebn5lci"]
 
 [ext_resource type="PackedScene" uid="uid://d0cbbsdialppt" path="res://Assets/Game/Models/Skeleton/skeleton.glb" id="1_2stko"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/InteractionArea.gd" id="2_t8qfq"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/DialogueInteraction.gd" id="3_4d76i"]
+[ext_resource type="Resource" uid="uid://dmyik7dh62b1h" path="res://Assets/Game/Ink/story.ink" id="4_uuluw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ned6a"]
 
@@ -93,6 +94,7 @@ shape = SubResource("CapsuleShape3D_ned6a")
 
 [node name="DialogueInteraction" type="Node" parent="InteractionArea"]
 script = ExtResource("3_4d76i")
+story = ExtResource("4_uuluw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)

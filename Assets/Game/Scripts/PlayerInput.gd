@@ -8,6 +8,7 @@ func _process(delta):
 	var input_direction = Vector2.ZERO
 		
 	if Input.is_action_just_pressed("interact"):
+		print("yea")
 		interactor.begin_interacting()
 
 	if interactor.is_interacting():

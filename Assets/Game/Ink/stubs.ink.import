@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://ju1onl8c11eh"
+path="res://.godot/imported/stubs.ink-2696c24f71f9abd94da1df2e2cb3eaa9.res"
+
+[deps]
+
+source_file="res://Assets/Game/Ink/stubs.ink"
+dest_files=["res://.godot/imported/stubs.ink-2696c24f71f9abd94da1df2e2cb3eaa9.res"]
+
+[params]
+
+is_main_file=false
+compress=true

@@ -3,22 +3,35 @@ extends VBoxContainer
 
 var story : InkStory
 
-func load_story(new_story)
-    story = new_story
-    continue_story();
+signal on_story_complete(story : InkStory)
 
-func continue_story()
-    for child in get_children():
-        child.queue_free()
+func load_story(new_story : InkStory):
+	for child in get_children():
+		child.queue_free()
 
-    var content : Label = new() { Text = story.ContinueMaximally() };
-    add_child(content);
+	story = new_story
+	continue_story();
 
-    for choice in story.current_choices:
-        var button : Button = new() { Text = choice.Text };
+func continue_story():
+	var text : String = story.ContinueMaximally()
 
-        button.Pressed += func(): 
-            story.choose_choice_index(choice.Index);
-            ContinueStory();
+	if text.is_empty() && story.GetCurrentChoices().size() == 0:
+		on_story_complete.emit(story)
+		return
 
-        add_child(button);
+	var content : Label = Label.new()
+	content.text = text
+	content.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	add_child(content)
+
+	for choice in story.GetCurrentChoices():
+		var button : Button = Button.new()
+		button.text = choice.GetText()
+
+		var index : int = choice.GetIndex()
+		button.pressed.connect(func(): 
+			print(index)
+			story.ChooseChoiceIndex(index);
+			continue_story());
+
+		add_child(button);

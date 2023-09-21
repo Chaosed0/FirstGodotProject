@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://c5ukmb6c0okke"]
+
+[ext_resource type="PackedScene" uid="uid://dmxcvxux8l7al" path="res://Assets/Game/Models/Mushroom/shroom.tscn" id="1_jgoxj"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/Player.gd" id="1_s16no"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/PlayerAnimControl.gd" id="3_8rqn8"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/PlayerInput.gd" id="3_ii4s1"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/PlayerInteraction.gd" id="5_ddhna"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_te55d"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ml0k7"]
+animation = &"move"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ghwtt"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_galt1"]
+nodes/Idle/node = SubResource("AnimationNodeAnimation_te55d")
+nodes/Idle/position = Vector2(540, 80)
+nodes/Move/node = SubResource("AnimationNodeAnimation_ml0k7")
+nodes/Move/position = Vector2(540, 200)
+nodes/MoveBlend/node = SubResource("AnimationNodeBlend2_ghwtt")
+nodes/MoveBlend/position = Vector2(740, 100)
+nodes/output/position = Vector2(900, 100)
+node_connections = [&"output", 0, &"MoveBlend", &"MoveBlend", 0, &"Idle", &"MoveBlend", 1, &"Move"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gb4en"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_tifoh"]
+states/Movement/node = SubResource("AnimationNodeBlendTree_galt1")
+states/Movement/position = Vector2(426, 100)
+states/Start/position = Vector2(220, 100)
+transitions = ["Start", "Movement", SubResource("AnimationNodeStateMachineTransition_gb4en")]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_w61va"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_eiqhb"]
+radius = 0.75
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_s16no")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="shroom" parent="Pivot" instance=ExtResource("1_jgoxj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Pivot/shroom/Armature" index="0"]
+bones/0/position = Vector3(0, 0.143358, 0)
+bones/0/rotation = Quaternion(0.00146567, -0.00285665, 0.0365207, 0.999328)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/rotation = Quaternion(0.00018502, 0.000266803, 0.0276479, 0.999618)
+
+[node name="AnimationTree" type="AnimationTree" parent="Pivot"]
+tree_root = SubResource("AnimationNodeStateMachine_tifoh")
+anim_player = NodePath("../shroom/AnimationPlayer")
+active = true
+parameters/Movement/MoveBlend/blend_amount = 1.0
+script = ExtResource("3_8rqn8")
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("3_ii4s1")
+
+[node name="Interaction" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_ddhna")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interaction"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("SphereShape3D_w61va")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("SphereShape3D_eiqhb")
+
+[editable path="Pivot/shroom"]

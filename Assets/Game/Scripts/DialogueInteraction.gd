@@ -3,7 +3,13 @@ extends BaseInteractionNode
 
 @export var story : InkStory
 
+var storyUI : StoryUI
+
 func on_interact():
-	var storyUI : StoryUI = get_tree().get_nodes_in_group("StoryUI")[0]
+	storyUI = get_tree().get_nodes_in_group("StoryUI")[0]
+	storyUI.on_story_complete.connect(on_story_complete)
 	storyUI.load_story(story)
-	return;
+
+func on_story_complete(story : InkStory):
+	storyUI.on_story_complete.disconnect(on_story_complete)
+	stop_interact()

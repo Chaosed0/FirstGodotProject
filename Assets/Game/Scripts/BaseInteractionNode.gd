@@ -17,5 +17,9 @@ func interact(interactor : PlayerInteraction):
 	on_interact()
 	return
 
+func stop_interact():
+	currentInteractor.stop_interacting()
+	currentInteractor = null
+
 func on_interact():
 	return

@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://pycv2orp3pmi"
+path="res://.godot/imported/PocketBeach.ink-4308fb982561466915979e6d37335468.res"
+
+[deps]
+
+source_file="res://Assets/Game/Ink/PocketBeach.ink"
+dest_files=["res://.godot/imported/PocketBeach.ink-4308fb982561466915979e6d37335468.res"]
+
+[params]
+
+is_main_file=false
+compress=true

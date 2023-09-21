@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dmyik7dh62b1h"
+path="res://.godot/imported/story.ink-c3dd75a1af15e0d6cf437d05f867fb55.res"
+
+[deps]
+
+source_file="res://Assets/Game/Ink/story.ink"
+dest_files=["res://.godot/imported/story.ink-c3dd75a1af15e0d6cf437d05f867fb55.res"]
+
+[params]
+
+is_main_file=true
+compress=true
