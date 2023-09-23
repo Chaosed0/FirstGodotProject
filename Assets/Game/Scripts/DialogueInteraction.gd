@@ -10,6 +10,6 @@ func on_interact():
 	storyUI.on_story_complete.connect(on_story_complete)
 	storyUI.load_story(story)
 
-func on_story_complete(story : InkStory):
+func on_story_complete(_story : InkStory):
 	storyUI.on_story_complete.disconnect(on_story_complete)
 	stop_interact()

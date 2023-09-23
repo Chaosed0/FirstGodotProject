@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://468bgu5ql3da"]
+
+[ext_resource type="Script" path="res://Assets/Game/Scripts/StoryChoice.gd" id="1_c6lxl"]
+
+[node name="StoryChoice" type="MarginContainer" node_paths=PackedStringArray("button", "label")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c6lxl")
+button = NodePath("Button")
+label = NodePath("RichTextLabel")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+flat = true
+alignment = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(1, 0.490196, 0, 1)
+layout_mode = 2
+mouse_filter = 2
+text = "This is a choice. This is a choice. This is a choice. This is a choice. This is a choice. "
+fit_content = true

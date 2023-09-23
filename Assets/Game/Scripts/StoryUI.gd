@@ -1,37 +1,82 @@
 class_name StoryUI
-extends VBoxContainer
+extends Control
 
-var story : InkStory
+@export var textScene : PackedScene
+@export var choiceScene : PackedScene
+@export var container : VBoxContainer
+
+var _story : InkStory
+var _currentTween : Tween
+var _currentChoices : Array[StoryChoice]
 
 signal on_story_complete(story : InkStory)
 
+func _ready():
+	modulate.a = 0
+
 func load_story(new_story : InkStory):
-	for child in get_children():
+	print("load story %s" % new_story)
+	modulate.a = 1
+
+	if _currentTween != null:
+		skip_tween()
+
+	for child in container.get_children():
 		child.queue_free()
 
-	story = new_story
+	_story = new_story
 	continue_story();
 
 func continue_story():
-	var text : String = story.ContinueMaximally()
+	var text : String = _story.ContinueMaximally()
 
-	if text.is_empty() && story.GetCurrentChoices().size() == 0:
-		on_story_complete.emit(story)
+	if text.is_empty() && _story.GetCurrentChoices().size() == 0:
+		print("complete")
+		complete_story()
 		return
 
-	var content : Label = Label.new()
-	content.text = text
-	content.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	add_child(content)
+	if _currentTween != null:
+		skip_tween()
+	
+	_currentTween = get_tree().create_tween()
+	_currentTween.set_parallel()
+	_currentTween.finished.connect(on_tween_finished)
 
-	for choice in story.GetCurrentChoices():
-		var button : Button = Button.new()
-		button.text = choice.GetText()
+	if !text.is_empty():
+		print("do text %s" % text)
+		var storyText : StoryText = textScene.instantiate()
+		storyText.start_typeout(text, _currentTween)
+		container.add_child(storyText)
 
-		var index : int = choice.GetIndex()
-		button.pressed.connect(func(): 
-			print(index)
-			story.ChooseChoiceIndex(index);
-			continue_story());
+		_currentTween.chain()
 
-		add_child(button);
+	for choice in _story.GetCurrentChoices():
+		print("do button %s" % choice.GetText())
+		var button : StoryChoice = choiceScene.instantiate()
+		button.initialize(choice.GetText(), choice.GetIndex(), _currentTween)
+
+		button.on_choice_chosen.connect(on_choice_pressed)
+		_currentChoices.append(button)
+		container.add_child(button);
+
+	_currentTween.play()
+
+func skip_tween():
+	_currentTween.custom_step(99999)
+
+func on_choice_pressed(index : int):
+	print(index)
+	_story.ChooseChoiceIndex(index);
+
+	for choice in _currentChoices:
+		choice.queue_free()
+
+	_currentChoices.clear()
+	continue_story()
+
+func complete_story():
+	modulate.a = 0
+	on_story_complete.emit(_story)
+
+func on_tween_finished():
+	_currentTween = null

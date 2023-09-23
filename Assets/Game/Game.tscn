@@ -58,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729645, 0)
 [node name="Skeleton3D" parent="Player/Pivot/shroom/Armature" index="0"]
 bones/0/position = Vector3(-1.86265e-09, -0.36787, -2.32831e-10)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
-bones/0/scale = Vector3(1, 0.970147, 1)
+bones/0/scale = Vector3(1, 0.954842, 1)
 bones/1/rotation = Quaternion(0, 0, 0, 1)
 
 [node name="AnimationTree" parent="Player/Pivot" index="1"]

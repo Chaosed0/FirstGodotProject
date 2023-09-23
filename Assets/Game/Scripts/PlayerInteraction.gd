@@ -25,7 +25,7 @@ func on_area_exited(area):
 func is_interacting() -> bool:
 	return interactingWith != null
 
-func _process(delta):
+func _process(_delta : float):
 	var nearest : InteractionArea
 	var nearestDistance : float
 
