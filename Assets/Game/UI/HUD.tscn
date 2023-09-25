@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfi2nypbhomk4"]
+[gd_scene load_steps=8 format=3 uid="uid://dfi2nypbhomk4"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/InteractionHud.gd" id="1_q28ff"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryUI.gd" id="2_80yve"]
 [ext_resource type="PackedScene" uid="uid://l8fr2ijwelce" path="res://Assets/Game/UI/StoryText.tscn" id="3_4iwxd"]
 [ext_resource type="PackedScene" uid="uid://468bgu5ql3da" path="res://Assets/Game/UI/StoryChoice.tscn" id="4_h3umm"]
+[ext_resource type="PackedScene" uid="uid://ddr4ip2rrsuk8" path="res://Assets/Game/UI/StorySeparator.tscn" id="5_4jhfo"]
 
 [sub_resource type="Theme" id="Theme_7qha1"]
 MarginContainer/constants/margin_bottom = -5
@@ -54,7 +55,16 @@ grow_vertical = 2
 script = ExtResource("2_80yve")
 textScene = ExtResource("3_4iwxd")
 choiceScene = ExtResource("4_h3umm")
-container = NodePath("ScrollContainer/VBoxContainer")
+separator = ExtResource("5_4jhfo")
+container = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
+
+[node name="Button" type="Button" parent="StoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="StoryUI"]
 layout_mode = 1
@@ -64,7 +74,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="StoryUI/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="StoryUI/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StoryUI/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StoryText" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+scroll_active = false
+
+[node name="StorySeparator" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("5_4jhfo")]
+layout_mode = 2
+
+[node name="StoryText2" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryChoice" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_h3umm")]
+layout_mode = 2
+
+[node name="StoryChoice2" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_h3umm")]
+layout_mode = 2
+
+[node name="StoryChoice3" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_h3umm")]
+layout_mode = 2

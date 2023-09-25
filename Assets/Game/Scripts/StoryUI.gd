@@ -3,6 +3,7 @@ extends Control
 
 @export var textScene : PackedScene
 @export var choiceScene : PackedScene
+@export var separator : PackedScene
 @export var container : VBoxContainer
 
 var _story : InkStory
@@ -43,7 +44,6 @@ func continue_story():
 	_currentTween.finished.connect(on_tween_finished)
 
 	if !text.is_empty():
-		print("do text %s" % text)
 		var storyText : StoryText = textScene.instantiate()
 		storyText.start_typeout(text, _currentTween)
 		container.add_child(storyText)
@@ -51,7 +51,6 @@ func continue_story():
 		_currentTween.chain()
 
 	for choice in _story.GetCurrentChoices():
-		print("do button %s" % choice.GetText())
 		var button : StoryChoice = choiceScene.instantiate()
 		button.initialize(choice.GetText(), choice.GetIndex(), _currentTween)
 
@@ -62,14 +61,17 @@ func continue_story():
 	_currentTween.play()
 
 func skip_tween():
-	_currentTween.custom_step(99999)
+	if _currentTween != null:
+		_currentTween.custom_step(99999)
 
 func on_choice_pressed(index : int):
-	print(index)
 	_story.ChooseChoiceIndex(index);
 
 	for choice in _currentChoices:
 		choice.queue_free()
+
+	var newSeparator = separator.instantiate()
+	container.add_child(newSeparator)
 
 	_currentChoices.clear()
 	continue_story()
@@ -80,3 +82,9 @@ func complete_story():
 
 func on_tween_finished():
 	_currentTween = null
+
+func _gui_input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		skip_tween()
+		print("I've been clicked D:")
+		return
