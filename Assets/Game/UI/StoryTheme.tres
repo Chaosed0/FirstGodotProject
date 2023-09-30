@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dspuh7p7f5rfg"]
+
+[ext_resource type="FontFile" uid="uid://b6kj23mh2arln" path="res://Assets/Game/Fonts/JosefinSans-Regular.ttf" id="1_u0f2y"]
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_u0f2y")
+default_font_size = 18
+RichTextLabel/constants/line_separation = 3
