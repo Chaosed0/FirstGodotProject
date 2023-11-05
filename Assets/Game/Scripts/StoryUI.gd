@@ -19,7 +19,7 @@ signal on_story_complete(story : InkStory)
 
 func _ready():
 	modulate.a = 0
-	_margin = content.get_theme_constant("margin_top") + content.get_theme_constant("margin_bottom") + 5
+	_margin = content.get_theme_constant("margin_top") + content.get_theme_constant("margin_bottom") + 10
 
 func load_story(knot: String):
 	modulate.a = 1

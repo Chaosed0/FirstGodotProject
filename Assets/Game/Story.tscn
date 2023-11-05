@@ -1,0 +1,142 @@
+[gd_scene load_steps=10 format=3 uid="uid://rx5mrmc2csae"]
+
+[ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
+[ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/StoryUI.gd" id="2_0w2o0"]
+[ext_resource type="Resource" uid="uid://dmyik7dh62b1h" path="res://Assets/Game/Ink/story.ink" id="3_01yio"]
+[ext_resource type="PackedScene" uid="uid://l8fr2ijwelce" path="res://Assets/Game/UI/StoryText.tscn" id="4_14l7b"]
+[ext_resource type="PackedScene" uid="uid://468bgu5ql3da" path="res://Assets/Game/UI/StoryChoice.tscn" id="5_21upg"]
+[ext_resource type="PackedScene" uid="uid://ddr4ip2rrsuk8" path="res://Assets/Game/UI/StorySeparator.tscn" id="6_3m0a7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk1fi"]
+bg_color = Color(0.0392157, 0.0392157, 0.117647, 1)
+
+[node name="Story" type="Node"]
+script = ExtResource("1_frdli")
+knot_path = "PocketBeach_Start"
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_x8d7b")
+
+[node name="Panel" type="Panel" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wl40i")
+
+[node name="Label" type="Label" parent="HUD/Panel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 291.0
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 14
+text = "Palestinians
+killed in genocide:
+100"
+uppercase = true
+
+[node name="StoryUI" type="Panel" parent="HUD" node_paths=PackedStringArray("bottomSpacer", "scrollContainer", "content", "container") groups=["StoryUI"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 50.0
+offset_right = 260.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kk1fi")
+script = ExtResource("2_0w2o0")
+story = ExtResource("3_01yio")
+textScene = ExtResource("4_14l7b")
+choiceScene = ExtResource("5_21upg")
+separator = ExtResource("6_3m0a7")
+bottomSpacer = NodePath("ScrollContainer/MarginContainer/VBoxContainer/BottomSpacer")
+scrollContainer = NodePath("ScrollContainer")
+content = NodePath("ScrollContainer/MarginContainer")
+container = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
+
+[node name="Button" type="Button" parent="HUD/StoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HUD/StoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/StoryUI/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/StoryUI/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StoryText" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+scroll_active = false
+
+[node name="StorySeparator" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("6_3m0a7")]
+layout_mode = 2
+
+[node name="StoryText2" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText3" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText4" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText5" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText6" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText7" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryText8" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_14l7b")]
+layout_mode = 2
+
+[node name="StoryChoice" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("5_21upg")]
+layout_mode = 2
+
+[node name="StoryChoice2" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("5_21upg")]
+layout_mode = 2
+
+[node name="StoryChoice3" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("5_21upg")]
+layout_mode = 2
+
+[node name="BottomSpacer" type="Control" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
