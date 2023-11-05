@@ -15,7 +15,7 @@ signal on_choice_chosen(index : int)
 func _ready():
 	button.pressed.connect(on_pressed)
 
-func initialize(choiceText : String, index : int, tween : Tween):
+func initialize(choiceText : String, index : int):
 	_index = index
 	self.modulate.a = 0
 
@@ -23,7 +23,8 @@ func initialize(choiceText : String, index : int, tween : Tween):
 	button.disabled = true
 	horizontal_spacer.custom_minimum_size = Vector2(shift_amount, 0)
 
-	tween.tween_interval(delay_time * index)
+func initialize_tween(tween : Tween):
+	tween.tween_interval(delay_time * _index)
 	tween.chain().tween_callback(self.set_enabled)
 	tween.tween_property(horizontal_spacer, "custom_minimum_size", Vector2(0,0), fade_in_time)
 	tween.tween_property(self, "modulate:a", 1, fade_in_time)

@@ -55,10 +55,10 @@ speed = 6
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Pivot/shroom/Armature" index="0"]
-bones/0/position = Vector3(0, 0.171586, 0)
-bones/0/rotation = Quaternion(0.00114178, -0.00253373, 0.0319445, 0.999486)
+bones/0/position = Vector3(0, 0.220438, 0)
+bones/0/rotation = Quaternion(0.000833512, 0.00288896, -0.0307068, 0.999524)
 bones/0/scale = Vector3(1, 1, 1)
-bones/1/rotation = Quaternion(0.000147786, 0.000230265, 0.0239226, 0.999714)
+bones/1/rotation = Quaternion(0.000273302, -0.000169547, -0.0186494, 0.999826)
 
 [node name="AnimationTree" type="AnimationTree" parent="Pivot" node_paths=PackedStringArray("movement")]
 tree_root = SubResource("AnimationNodeStateMachine_tifoh")

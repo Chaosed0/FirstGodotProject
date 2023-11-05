@@ -39,7 +39,7 @@ text = "[E] Interact"
 label_settings = SubResource("LabelSettings_im3ux")
 script = ExtResource("1_q28ff")
 
-[node name="StoryUI" type="Panel" parent="." node_paths=PackedStringArray("container") groups=["StoryUI"]]
+[node name="StoryUI" type="Panel" parent="." node_paths=PackedStringArray("bottomSpacer", "scrollContainer", "content", "container") groups=["StoryUI"]]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -53,6 +53,9 @@ story = ExtResource("4_gesdn")
 textScene = ExtResource("3_4iwxd")
 choiceScene = ExtResource("4_h3umm")
 separator = ExtResource("5_4jhfo")
+bottomSpacer = NodePath("ScrollContainer/MarginContainer/VBoxContainer/BottomSpacer")
+scrollContainer = NodePath("ScrollContainer")
+content = NodePath("ScrollContainer/MarginContainer")
 container = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
 
 [node name="Button" type="Button" parent="StoryUI"]
@@ -95,6 +98,24 @@ layout_mode = 2
 [node name="StoryText2" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
 layout_mode = 2
 
+[node name="StoryText3" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryText4" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryText5" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryText6" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryText7" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
+[node name="StoryText8" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_4iwxd")]
+layout_mode = 2
+
 [node name="StoryChoice" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_h3umm")]
 layout_mode = 2
 
@@ -102,4 +123,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="StoryChoice3" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_h3umm")]
+layout_mode = 2
+
+[node name="BottomSpacer" type="Control" parent="StoryUI/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

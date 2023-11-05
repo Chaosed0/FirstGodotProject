@@ -3,8 +3,10 @@ extends RichTextLabel
 
 @export var charactersPerSecond : float
 
-func start_typeout(storyText : String, tween : Tween):
+func set_story_text(storyText: String):
 	text = storyText
+
+func start_typeout(tween : Tween):
 	tween.tween_method(_set_visible_characters, 0, text.length(), text.length() / charactersPerSecond)
 
 func _set_visible_characters(count : int):
