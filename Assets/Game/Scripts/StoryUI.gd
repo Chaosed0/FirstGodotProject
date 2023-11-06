@@ -37,7 +37,17 @@ func load_story(knot: String):
 	continue_story(true);
 
 func continue_story(is_first : bool):
-	var text : String = story.ContinueMaximally()
+	if !story.GetCanContinue():
+		complete_story()
+		return
+
+	var nilHandler = story.ContinueMaximally()
+
+	if nilHandler == null:
+		complete_story()
+		return
+
+	var text : String = nilHandler
 
 	if text.is_empty() && story.GetCurrentChoices().size() == 0:
 		complete_story()

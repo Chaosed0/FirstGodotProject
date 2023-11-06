@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://rx5mrmc2csae"]
+[gd_scene load_steps=17 format=3 uid="uid://rx5mrmc2csae"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
 [ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
@@ -7,12 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://l8fr2ijwelce" path="res://Assets/Game/UI/StoryText.tscn" id="4_14l7b"]
 [ext_resource type="PackedScene" uid="uid://468bgu5ql3da" path="res://Assets/Game/UI/StoryChoice.tscn" id="5_21upg"]
 [ext_resource type="PackedScene" uid="uid://ddr4ip2rrsuk8" path="res://Assets/Game/UI/StorySeparator.tscn" id="6_3m0a7"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/AudioHandler.gd" id="8_dxvdu"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/FadeOverTimeTextEffect.gd" id="8_iopvy"]
+[ext_resource type="Resource" uid="uid://gub3sijhg57j" path="res://Assets/Game/Audio/they-bombed-my-angels-2.srt" id="9_vxrq8"]
+[ext_resource type="Resource" uid="uid://cn4sedtanu8n7" path="res://Assets/Game/Audio/we-stand-with-israel.srt" id="10_e0n1q"]
+[ext_resource type="AudioStream" uid="uid://cal8woub5lgxx" path="res://Assets/Game/Audio/they-bombed-my-angels-2.ogg" id="10_ot4cl"]
+[ext_resource type="AudioStream" uid="uid://e7umap3d0ybq" path="res://Assets/Game/Audio/we-stand-with-israel.ogg" id="12_58ilu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk1fi"]
-bg_color = Color(0.0392157, 0.0392157, 0.117647, 1)
+bg_color = Color(0.0392157, 0.0392157, 0.0588235, 1)
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t1o02"]
+script = ExtResource("8_iopvy")
 
 [node name="Story" type="Node"]
 script = ExtResource("1_frdli")
@@ -36,18 +45,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wl40i")
 
-[node name="Label" type="Label" parent="HUD/Panel"]
-layout_mode = 1
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 291.0
-offset_bottom = 32.0
-theme_override_font_sizes/font_size = 14
-text = "Palestinians
-killed in genocide:
-100"
-uppercase = true
-
 [node name="StoryUI" type="Panel" parent="HUD" node_paths=PackedStringArray("bottomSpacer", "scrollContainer", "content", "container") groups=["StoryUI"]]
 layout_mode = 1
 anchors_preset = -1
@@ -55,9 +52,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -250.0
-offset_top = 50.0
 offset_right = 260.0
-offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kk1fi")
@@ -71,19 +66,13 @@ scrollContainer = NodePath("ScrollContainer")
 content = NodePath("ScrollContainer/MarginContainer")
 container = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
 
-[node name="Button" type="Button" parent="HUD/StoryUI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="ScrollContainer" type="ScrollContainer" parent="HUD/StoryUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 25.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -140,3 +129,50 @@ layout_mode = 2
 
 [node name="BottomSpacer" type="Control" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="SubtitleLeft" type="RichTextLabel" parent="HUD"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 305.0
+offset_bottom = -5.0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.588235, 0.588235, 0.588235, 1)
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. "
+scroll_active = false
+scroll_following = true
+custom_effects = [SubResource("RichTextEffect_t1o02")]
+
+[node name="SubtitleRight" type="RichTextLabel" parent="HUD"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+offset_top = 5.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.588235, 0.588235, 0.588235, 1)
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. "
+scroll_active = false
+scroll_following = true
+custom_effects = [SubResource("RichTextEffect_t1o02")]
+
+[node name="TestSRTReader" type="Node" parent="HUD" node_paths=PackedStringArray("player", "leftLabel", "rightLabel")]
+script = ExtResource("8_dxvdu")
+player = NodePath("AudioStreamPlayer")
+leftLabel = NodePath("../SubtitleLeft")
+rightLabel = NodePath("../SubtitleRight")
+srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("10_e0n1q"), ExtResource("9_vxrq8")])
+audioStreams = Array[AudioStream]([ExtResource("12_58ilu"), ExtResource("10_ot4cl")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]

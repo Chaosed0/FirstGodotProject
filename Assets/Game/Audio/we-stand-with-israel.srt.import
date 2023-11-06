@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://cn4sedtanu8n7"
+path="res://.godot/imported/we-stand-with-israel.srt-5bc7010ffd347f04f6d72254da18b01d.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/we-stand-with-israel.srt"
+dest_files=["res://.godot/imported/we-stand-with-israel.srt-5bc7010ffd347f04f6d72254da18b01d.res"]
+
+[params]
+

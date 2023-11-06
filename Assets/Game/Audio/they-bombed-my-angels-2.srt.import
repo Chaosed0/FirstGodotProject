@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://gub3sijhg57j"
+path="res://.godot/imported/they-bombed-my-angels-2.srt-30937bb1f150cb4f1ae26b7eea01cd84.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/they-bombed-my-angels-2.srt"
+dest_files=["res://.godot/imported/they-bombed-my-angels-2.srt-30937bb1f150cb4f1ae26b7eea01cd84.res"]
+
+[params]
+
