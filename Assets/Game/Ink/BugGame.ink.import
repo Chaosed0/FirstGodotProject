@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://b4aqwm5r5t07k"
+path="res://.godot/imported/BugGame.ink-26692ab8934a348d8b03ef639ab7ddd1.res"
+
+[deps]
+
+source_file="res://Assets/Game/Ink/BugGame.ink"
+dest_files=["res://.godot/imported/BugGame.ink-26692ab8934a348d8b03ef639ab7ddd1.res"]
+
+[params]
+
+is_main_file=false
+compress=true
