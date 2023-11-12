@@ -4,6 +4,8 @@ INCLUDE Day1.ink
 INCLUDE Day2.ink
 INCLUDE Day3.ink
 INCLUDE GameLaunch.ink
+INCLUDE Common.ink
+
 
 ~ SEED_RANDOM(235)
 
@@ -31,11 +33,9 @@ INCLUDE GameLaunch.ink
 ~ bug_count += addl_bug_count
 
 
-~ break_time = 1230
+~ break_time = 1700
 -> Day_2 ->
 -> BugGame ->
-~ break_time = 1700
--> Day_2_Lunch ->
 -> BugGame ->
 -> Day_2_End ->
 ~ bug_count += addl_bug_count
@@ -44,7 +44,7 @@ INCLUDE GameLaunch.ink
 ~ break_time = 1230
 -> Day_3 ->
 -> BugGame ->
-~ break_time = 1700
+~ break_time = 1600
 -> Day_3_Lunch ->
 -> BugGame ->
 -> Launch_Party ->

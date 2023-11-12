@@ -2,6 +2,10 @@
 VAR day_count = 0
 VAR break_time = 1200
 VAR debug = true
+VAR morning_anxious_count = 0
+VAR morning_excited_count = 0
+VAR watched_baking_show = false
+VAR played_video_game = false
 
 LIST bug1_names = (cat_enemy),(wood_wall),(blue_orb),(big_red_hat),(katana_sword),(dash_ability)
 VAR bug1_fixed = ()
