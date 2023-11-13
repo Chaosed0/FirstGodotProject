@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://dbvbtafmy4klb"
+path="res://.godot/imported/girl-trapped-in-rubble.srt-e02b35fc08487b0b18d6e6a35e5370b3.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/girl-trapped-in-rubble.srt"
+dest_files=["res://.godot/imported/girl-trapped-in-rubble.srt-e02b35fc08487b0b18d6e6a35e5370b3.res"]
+
+[params]
+

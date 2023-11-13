@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://023ao20mjvvu"
+path="res://.godot/imported/children-gaza-press-conference.srt-4afdfa4ea6879f10904e53a0367cb71f.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/children-gaza-press-conference.srt"
+dest_files=["res://.godot/imported/children-gaza-press-conference.srt-4afdfa4ea6879f10904e53a0367cb71f.res"]
+
+[params]
+

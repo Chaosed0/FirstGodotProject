@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://cgoxlkpidqes6"
+path="res://.godot/imported/child-dead-father.srt-6cdf51bb3970b72855b78fde97e06167.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/child-dead-father.srt"
+dest_files=["res://.godot/imported/child-dead-father.srt-6cdf51bb3970b72855b78fde97e06167.res"]
+
+[params]
+

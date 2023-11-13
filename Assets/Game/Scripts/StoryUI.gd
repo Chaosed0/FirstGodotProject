@@ -9,17 +9,29 @@ extends Control
 @export var scrollContainer : ScrollContainer
 @export var content : MarginContainer
 @export var container : VBoxContainer
+@export var debug : bool
+
+signal begin_audio_signal
 
 var _margin : float
 var _currentTween : Tween
 var _currentChoices : Array[StoryChoice]
 var _currentStoryText : RichTextLabel
 
+var _didBeginAudio : bool
+var _deferredBeginAudio : bool
+var _randomizeNextChoices : bool
+
 signal on_story_complete(story : InkStory)
 
 func _ready():
 	modulate.a = 0
 	_margin = content.get_theme_constant("margin_top") + content.get_theme_constant("margin_bottom") + 10
+
+	var randomizeNextCallable = Callable(self, "randomize_next_choices")
+	var beginAudioCallable = Callable(self, "begin_audio")
+	story.BindExternalFunction("shuffle_next_choices", randomizeNextCallable)
+	story.BindExternalFunction("begin_audio", beginAudioCallable)
 
 func load_story(knot: String):
 	modulate.a = 1
@@ -33,6 +45,8 @@ func load_story(knot: String):
 
 	if knot != null:
 		story.ChoosePathString(knot)
+
+	story.StoreVariable("debug", debug)
 
 	continue_story(true);
 
@@ -67,7 +81,15 @@ func continue_story(is_first : bool):
 		_currentStoryText.set_story_text(text)
 		container.add_child(_currentStoryText)
 
-	for choice in story.GetCurrentChoices():
+	var choices = story.GetCurrentChoices()
+	var indexes = range(choices.size())
+
+	if _randomizeNextChoices:
+		indexes.shuffle()
+		_randomizeNextChoices = false
+
+	for index in indexes:
+		var choice = choices[index]
 		var button : StoryChoice = choiceScene.instantiate()
 		button.initialize(choice.GetText(), choice.GetIndex())
 
@@ -100,6 +122,7 @@ func continue_story(is_first : bool):
 	if _currentStoryText != null:
 		_currentStoryText.start_typeout(_currentTween)
 		_currentTween.chain()
+		_currentTween.tween_callback(Callable(self, "begin_audio_real"))
 
 	for button in _currentChoices:
 		button.initialize_tween(_currentTween)
@@ -125,6 +148,19 @@ func complete_story():
 
 func on_tween_finished():
 	_currentTween = null
+
+func randomize_next_choices():
+	_randomizeNextChoices = true
+
+func begin_audio():
+	if !_didBeginAudio:
+		_deferredBeginAudio = true
+
+func begin_audio_real():
+	if _deferredBeginAudio:
+		begin_audio_signal.emit()
+		_deferredBeginAudio = false
+		_didBeginAudio = true
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://0ymt8s66uw1m"
+path="res://.godot/imported/palestinian-man-kids-rubble.srt-748df37bd3a64abeccc4bbc8c26e08ce.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/palestinian-man-kids-rubble.srt"
+dest_files=["res://.godot/imported/palestinian-man-kids-rubble.srt-748df37bd3a64abeccc4bbc8c26e08ce.res"]
+
+[params]
+

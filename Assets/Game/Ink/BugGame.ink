@@ -247,17 +247,17 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
         ~replay_steps++
         You open up the log file from the crash report.
     - else:
-        You open up the log file, but stare at it blankly. Why did you open this again?
+        You open up the log file again, but stare at it blankly. Didn't you already open this?
     }
  
  + [Find the version of the game where the crash occurred]
+    {replay_steps > 1: You try to find the version where the crash occurred. Wait... You already did this.}
+    {replay_steps < 1: You haven't opened the log file yet. You can't find the version without the log file.}
     { replay_steps == 1:
         ~replay_steps++
         You scan the log file until you find the version marker. Bingo.
-    - else:
-        You try to find the version where the crash occurred. Wait... You must be misremembering the steps.
     }
-
+    
  + [Check out the correct version of the game from source control]
     {replay_steps < 2: You open up your source control software to check out the correct version, but you don't know the version to check out yet.}
     {replay_steps > 2: You open up your source control software to check out the correct version, but you've already checked out the correct version.}
@@ -276,17 +276,14 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
   
  + [Enter playmode]
     {replay_steps < 4: You enter playmode, but slap your forehead. You haven't even opened the right scene yet.}
-    {replay_steps > 4:
-        ~ replay_steps = 4
-        You're already in playmode, so this results in you exiting playmode. You need to re-enter it.
-    }
+    {replay_steps > 4: You're already in playmode. }
     {replay_steps == 4:
         ~replay_steps++
         You put Unity into play mode.
     }
  
  + [Load the replay file]
-    {replay_steps < 5: You try to load the replay, but you haven't entered the replay scene yet.}
+    {replay_steps < 5: You try to load the replay, but you haven't entered playmode in the replay scene yet.}
     {replay_steps > 5: You have already loaded the replay file.}
     {replay_steps == 5:
         ~replay_steps++
@@ -306,10 +303,10 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
     {replay_steps == 7:
         ~replay_steps++
         You take a look at the console. Great - there's the data you needed. You have {bug2_progress == 0:a | another} hint as to where the crash might be.
-    }
 
-    -> crash_advance_progress ->
-    ->->
+        -> crash_advance_progress ->
+        ->->
+    }
  
  + [Give up]
     Replays have always been terribly finicky. Perhaps it's best to try another tactic.
@@ -496,6 +493,7 @@ You lean back. Your head is heavy. You've just wasted 30 minutes, and now you ha
      - 0: ~add_time(20)
      - 1: ~add_time(40)
      - 2: ~add_time(90)
+     - else: ~add_time(90)
     }
     
     ->->

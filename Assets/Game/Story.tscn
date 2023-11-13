@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://rx5mrmc2csae"]
+[gd_scene load_steps=45 format=3 uid="uid://rx5mrmc2csae"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
 [ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
@@ -12,7 +12,35 @@
 [ext_resource type="Resource" uid="uid://gub3sijhg57j" path="res://Assets/Game/Audio/they-bombed-my-angels-2.srt" id="9_vxrq8"]
 [ext_resource type="Resource" uid="uid://cn4sedtanu8n7" path="res://Assets/Game/Audio/we-stand-with-israel.srt" id="10_e0n1q"]
 [ext_resource type="AudioStream" uid="uid://cal8woub5lgxx" path="res://Assets/Game/Audio/they-bombed-my-angels-2.ogg" id="10_ot4cl"]
+[ext_resource type="Resource" uid="uid://18n11foow2ag" path="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.srt" id="11_mg7ib"]
 [ext_resource type="AudioStream" uid="uid://e7umap3d0ybq" path="res://Assets/Game/Audio/we-stand-with-israel.ogg" id="12_58ilu"]
+[ext_resource type="Resource" uid="uid://bf31ysmg5xk2" path="res://Assets/Game/Audio/wael-al-dadouh.srt" id="12_g14r7"]
+[ext_resource type="Resource" uid="uid://bplotfqmxu40s" path="res://Assets/Game/Audio/us-geneva-convention.srt" id="14_xjsyx"]
+[ext_resource type="Resource" uid="uid://bl7hkvqclpeyb" path="res://Assets/Game/Audio/hospital-bombings.srt" id="15_tujst"]
+[ext_resource type="Resource" uid="uid://0ymt8s66uw1m" path="res://Assets/Game/Audio/palestinian-man-kids-rubble.srt" id="16_5xydy"]
+[ext_resource type="Resource" uid="uid://dycgfdbru50y0" path="res://Assets/Game/Audio/ta-nehsis-coates-democracynow.srt" id="17_fkdiq"]
+[ext_resource type="Resource" uid="uid://bwppbu3rovk0p" path="res://Assets/Game/Audio/senator-warren-dinner.srt" id="17_kh840"]
+[ext_resource type="Resource" uid="uid://cuwpo8gh0wm1w" path="res://Assets/Game/Audio/we-cant-take-it-journalist.srt" id="18_t6gnk"]
+[ext_resource type="Resource" uid="uid://hmhl407vm38n" path="res://Assets/Game/Audio/blinken-protestors.srt" id="19_236gv"]
+[ext_resource type="Resource" uid="uid://dbvbtafmy4klb" path="res://Assets/Game/Audio/girl-trapped-in-rubble.srt" id="20_o66s4"]
+[ext_resource type="Resource" uid="uid://023ao20mjvvu" path="res://Assets/Game/Audio/children-gaza-press-conference.srt" id="21_tit7x"]
+[ext_resource type="Resource" uid="uid://jxblu73ds7h1" path="res://Assets/Game/Audio/quds-al-shifa-cut.srt" id="22_dt1ji"]
+[ext_resource type="Resource" uid="uid://cgoxlkpidqes6" path="res://Assets/Game/Audio/child-dead-father.srt" id="23_p6ku7"]
+[ext_resource type="AudioStream" uid="uid://dkspjb7b3r4x8" path="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.ogg" id="25_no0ea"]
+[ext_resource type="Resource" uid="uid://ccwchsvar2jul" path="res://Assets/Game/Audio/fadi-conditions-gaza.srt" id="25_pilmb"]
+[ext_resource type="AudioStream" uid="uid://laiw8xbdj8oj" path="res://Assets/Game/Audio/wael-al-dadouh.ogg" id="26_c1f5q"]
+[ext_resource type="AudioStream" uid="uid://ck1wyl3i3jdf0" path="res://Assets/Game/Audio/us-geneva-convention.ogg" id="28_fg6jk"]
+[ext_resource type="AudioStream" uid="uid://58llk5lu8lcm" path="res://Assets/Game/Audio/hospital-bombings.ogg" id="29_ee3tt"]
+[ext_resource type="AudioStream" uid="uid://whdkcuecqo66" path="res://Assets/Game/Audio/ta-nehsis-coates-democracynow.ogg" id="30_s8itx"]
+[ext_resource type="AudioStream" uid="uid://co5ayh32i5y5" path="res://Assets/Game/Audio/palestinian-man-kids-rubble.ogg" id="31_w135n"]
+[ext_resource type="AudioStream" uid="uid://byiq1nvp0i0af" path="res://Assets/Game/Audio/we-cant-take-it-journalist.ogg" id="32_wsg21"]
+[ext_resource type="AudioStream" uid="uid://d1qbuckuaxhui" path="res://Assets/Game/Audio/blinken-protestors.ogg" id="33_22rt7"]
+[ext_resource type="AudioStream" uid="uid://7a0hctjxqqt0" path="res://Assets/Game/Audio/senator-warren-dinner.ogg" id="33_rvd1u"]
+[ext_resource type="AudioStream" uid="uid://dovi5q5fqevil" path="res://Assets/Game/Audio/girl-trapped-in-rubble.ogg" id="34_ui3q3"]
+[ext_resource type="AudioStream" uid="uid://bs45d5n0mfjjo" path="res://Assets/Game/Audio/children-gaza-press-conference.ogg" id="35_dy1iv"]
+[ext_resource type="AudioStream" uid="uid://boxh8buypfidy" path="res://Assets/Game/Audio/quds-al-shifa-cut.ogg" id="36_b3rjt"]
+[ext_resource type="AudioStream" uid="uid://babct21cij0bf" path="res://Assets/Game/Audio/child-dead-father.ogg" id="37_ncfbp"]
+[ext_resource type="AudioStream" uid="uid://buh42jbs72qdy" path="res://Assets/Game/Audio/fadi-conditions-gaza.ogg" id="41_52orw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
@@ -25,7 +53,7 @@ script = ExtResource("8_iopvy")
 
 [node name="Story" type="Node"]
 script = ExtResource("1_frdli")
-knot_path = "PocketBeach_Start"
+knot_path = "FullGame"
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -167,12 +195,13 @@ scroll_active = false
 scroll_following = true
 custom_effects = [SubResource("RichTextEffect_t1o02")]
 
-[node name="TestSRTReader" type="Node" parent="HUD" node_paths=PackedStringArray("player", "leftLabel", "rightLabel")]
+[node name="TestSRTReader" type="Node" parent="HUD" node_paths=PackedStringArray("storyUi", "player", "leftLabel", "rightLabel")]
 script = ExtResource("8_dxvdu")
+storyUi = NodePath("../StoryUI")
 player = NodePath("AudioStreamPlayer")
 leftLabel = NodePath("../SubtitleLeft")
 rightLabel = NodePath("../SubtitleRight")
-srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("10_e0n1q"), ExtResource("9_vxrq8")])
-audioStreams = Array[AudioStream]([ExtResource("12_58ilu"), ExtResource("10_ot4cl")])
+srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("25_pilmb"), ExtResource("9_vxrq8"), ExtResource("14_xjsyx"), ExtResource("15_tujst"), ExtResource("21_tit7x"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("18_t6gnk"), ExtResource("19_236gv"), ExtResource("20_o66s4"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
+audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("41_52orw"), ExtResource("10_ot4cl"), ExtResource("28_fg6jk"), ExtResource("29_ee3tt"), ExtResource("35_dy1iv"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("32_wsg21"), ExtResource("33_22rt7"), ExtResource("34_ui3q3"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]

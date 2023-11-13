@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://bplotfqmxu40s"
+path="res://.godot/imported/us-geneva-convention.srt-8693e5b0afbce1b544d8895ee12c9be8.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/us-geneva-convention.srt"
+dest_files=["res://.godot/imported/us-geneva-convention.srt-8693e5b0afbce1b544d8895ee12c9be8.res"]
+
+[params]
+

@@ -19,7 +19,7 @@ func initialize(choiceText : String, index : int):
 	_index = index
 	self.modulate.a = 0
 
-	label.text = choiceText
+	label.text = str(" ", choiceText)
 	button.disabled = true
 	horizontal_spacer.custom_minimum_size = Vector2(shift_amount, 0)
 

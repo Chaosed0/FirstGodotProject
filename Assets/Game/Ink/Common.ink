@@ -15,18 +15,26 @@ You sit down on one of the bus' seats.
  
 === common_morning ===
 
+~ temp did_kiss_partner = false
+~ temp did_look_phone = false
+~ temp did_brush_teeth = false
+~ temp did_eat_breakfast = false
+
 ~ temp did_retweet_palestine = false
 ~ temp did_tweet_dogsword = false
 
 
 - (choices)
 
-+ [Kiss your partner.]
++ {!did_kiss_partner} [Kiss your partner.]
 {You kiss your partner. They are still sleeping, but they murmur something indistinct.|Your partner has already awoken before you. They are feeding the cat. You interrupt them and give them a big kiss. They laugh in delight.|Your partner is awake, but still in bed scrolling through videos on social media. You kiss them, and they throw their arms about you. "See you at the launch party later tonight," they say. You nod.}
+~did_kiss_partner = true
 -> choices
 
-+ [Look at your phone.]
++ {!did_look_phone} [Look at your phone.]
 You look at Twitter. {There are a lot of tragic videos on your timeline, as, unfortunately, today not only marks three days until your release. It also marks three days since the start of the Israeli bombardment on Gaza, the latest episode in the ongoing Palestinian genocide. Twitter is filled with posts from all sorts people denouncing the massacre.|The Palestinian massacre continues, and your timeline is filled with videos of folks protesting in person.|The Palestinian massacre continues. Your timeline is filled with videos of the most recent hospital that was bombed by Israel.}
+~did_look_phone = true
+~begin_audio()
  
     -- (phone)
     ++ (retweet_palestine) {!did_retweet_palestine} [Retweet some of the people supporting Palestinians.]
@@ -47,12 +55,14 @@ You look at Twitter. {There are a lot of tragic videos on your timeline, as, unf
     You put your phone in your pocket. The genocide continues anyway.
     -> choices
  
-+ [Brush your teeth.]
++ {!did_brush_teeth} [Brush your teeth.]
 You go and brush your teeth. {Hygiene matters.|You won't get another set.|You muse about Dog with a Sword's launch as you brush.}
+~did_brush_teeth=true
 -> choices
 
-+ [Go eat breakfast.]
++ {!did_eat_breakfast} [Go eat breakfast.]
 You go and eat breakfast. {Need to fuel up for the day.|Breakfast may not be the most important meal of the day, but it is important.|Gotta get energy for the last day before launch.}
+~did_eat_breakfast=true
 -> choices
 
 + {CHOICE_COUNT() == 0} [Head out for the office.]
@@ -84,7 +94,7 @@ You put on a jacket and head out the door. You walk down the street to your bus.
 * [Practice playing an instrument.]
     You sit down with your instrument and practice for a little while. {day_count == 0: Your partner hangs out, and doesn't say too much since she knows you're concentrating, but you enjoy her presence nonetheless.} Soon, it's bedtime.
 
-* [Be intimate with your partner.]
+* {day_count == 0} [Be intimate with your partner.]
     You snuggle with your partner. Then you do some other physical things until it's bedtime.
     
 - ->->

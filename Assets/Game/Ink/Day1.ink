@@ -6,10 +6,10 @@
 
 You wake up to your alarm. It is {get_time()} on Tuesday, the 10th of October. The game you have been working on for three years, Dog with a Sword, is releasing on Friday - in three days.
 
-How are you feeling about the release of Dog with a Sword?
+How are you feeling about the release of Dog with /fora Sword?
 
 * [You are feeling anxious.]
-Naturally, you are feeling anxious about the release. It's going to be the first time the public sees what you're been working on for three years, and while you're looking forward to sharing it with them, you don't know how they'll react.
+Naturally, you are feeling anxious about the release. You've been working on Dog with a Sword for three years. This release will be the first time the public sees it, and while you're looking forward to sharing it with them, you don't know how they'll react.
 
 The anxiousness makes you get out of bed.
 
@@ -17,6 +17,8 @@ The anxiousness makes you get out of bed.
 You're quite excited to share what you've got with the world. You think the game is in a great shape, and you're confident that the public will receive the game well.
 
 You get out of bed feeling energized and ready to get to work.
+
+- 
 
 -> common_morning ->
 -> common_bus_ride ->
@@ -56,29 +58,28 @@ It's {get_time()}. You have until {get_time_custom(break_time)}, when you take a
 
 It is {get_time()}. It's time for {time > 1330: a late lunch.|lunch.}
 
-You and your coworkers gather around the table. The mood is somewhat down, as everyone is nervous about the upcoming launch of Dog with a Sword. Still, everyone's feeling proud of their work, and people are largely optimistic.
+There isn't any set time for lunch at the office, but when one person gets up and starts eating, that's the tacit signal for everyone to go get food and gather around the office's common table.
 
-A coworker asks how you are feeling. You respond that:
+You and your coworkers don't have a whole lot in common, but that's okay. You all usually find something to talk about. The topics range from the shows folks are watching to the games people are playing to the current events of the day.
 
-* [You feel extremely nervous about the number of bugs that are still in the project.]
-You're still pretty nervous about how many bugs there are. There's {bug_count} on the task tracker right now, and who knows how many waiting to be found by QA. The other engineers agree.
+Today, everyone is talking about the layoffs that are happening all around the game industry. A local studio has just laid off a ton of their staff. It's a studio that seemed completely stable from the outside, so it comes as a shock to everyone.
 
-* [You're feeling optimistic about the game's chance of success.]
-You know that there's a lot of work to be done yet, but you're feeling relatively optimistic about the game. Hopefully it makes enough sales that the publisher will fund another project.
-
-The founder of your small company is at the table, and he agrees. He talks hard numbers, but simultaneously uplifts the spirits of everyone at the table.
-
-* [You're feeling proud of the work that you've been putting in.]
-
-You feel really good about the work you've been doing. You think folks will be able to see the amount of love put into the game, and they'll appreciate it.
-
-Everyone around the table nods. They're excited for people to finally see the work they've been doing.
-
-- Before everyone wraps up their food, the creative director reminds everyone about the launch party on Thursday, two days from now.
+* [You feel sorry for the developers who were affected.]
+    Layoffs are terribly rough. You know from experience. You feel for those who were affected, and hope they find work soon.
+* [You wonder how long until it affects you.]
+    You sit, disquieted. Layoffs are more and more common across the industry. How long until the layoffs come to affect you?
+* [You're just glad it didn't happen to you.]
+    You look on the bright side. You're here, working on Dog with a Sword, a game that's about to release. That must count for something.
+    
+-
 
 * [Finish up your food.]
 
-- It's {get_time()}. You have until {get_time_custom(break_time)}, when you will go home, to get as much work done as you can. There are {bug_count} bugs left to fix.
+- You finish up your food. You're a little worried, no doubt, but you still have a game to finish.
+
+Before everyone gets back to work, the creative director reminds everyone about the launch party on Thursday, two days from now.
+
+It's {get_time()}. You have until {get_time_custom(break_time)}, when you will go home, to get as much work done as you can. There are {bug_count} bugs left to fix.
 
 * [Time to crush bugs.]
  

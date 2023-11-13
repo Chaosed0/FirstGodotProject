@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://bf31ysmg5xk2"
+path="res://.godot/imported/wael-al-dadouh.srt-982ceb2cf0a28fdbfb6331705fe7a3fd.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/wael-al-dadouh.srt"
+dest_files=["res://.godot/imported/wael-al-dadouh.srt-982ceb2cf0a28fdbfb6331705fe7a3fd.res"]
+
+[params]
+

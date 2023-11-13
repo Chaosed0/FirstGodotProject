@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://bwppbu3rovk0p"
+path="res://.godot/imported/senator-warren-dinner.srt-911b30e3ca9c0af7a1f25c4209e6c102.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/senator-warren-dinner.srt"
+dest_files=["res://.godot/imported/senator-warren-dinner.srt-911b30e3ca9c0af7a1f25c4209e6c102.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://ccwchsvar2jul"
+path="res://.godot/imported/fadi-conditions-gaza.srt-ea0bde47f4d79e260d3af496b09298ab.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/fadi-conditions-gaza.srt"
+dest_files=["res://.godot/imported/fadi-conditions-gaza.srt-ea0bde47f4d79e260d3af496b09298ab.res"]
+
+[params]
+

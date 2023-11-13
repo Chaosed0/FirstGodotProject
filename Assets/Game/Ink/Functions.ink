@@ -85,5 +85,10 @@ VAR time = 1000
     
     {hours}:{minutes < 10:0}{minutes}{daytime}
     
+EXTERNAL shuffle_next_choices()
 === function shuffle_next_choices() ===
     < DEBUG > NEXT CHOICES SHOULD BE SHUFFLED
+    
+EXTERNAL begin_audio()
+=== function begin_audio() ===
+    < DEBUG > AUDIO SHOULD BEGIN

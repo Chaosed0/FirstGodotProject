@@ -22,7 +22,6 @@ INCLUDE Common.ink
 
 
 === FullGame ===
-
 ~ break_time = 1230
 -> Day_1 ->
 -> BugGame ->

@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://jxblu73ds7h1"
+path="res://.godot/imported/quds-al-shifa-cut.srt-70c510a2251ea2e2c848326e16c629f8.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/quds-al-shifa-cut.srt"
+dest_files=["res://.godot/imported/quds-al-shifa-cut.srt-70c510a2251ea2e2c848326e16c629f8.res"]
+
+[params]
+

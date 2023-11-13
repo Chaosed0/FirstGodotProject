@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://bl7hkvqclpeyb"
+path="res://.godot/imported/hospital-bombings.srt-839d670b08b64962ead527fd440aceff.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/hospital-bombings.srt"
+dest_files=["res://.godot/imported/hospital-bombings.srt-839d670b08b64962ead527fd440aceff.res"]
+
+[params]
+

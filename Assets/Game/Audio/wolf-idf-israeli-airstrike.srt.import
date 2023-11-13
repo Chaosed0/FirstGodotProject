@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://18n11foow2ag"
+path="res://.godot/imported/wolf-idf-israeli-airstrike.srt-d3d56bc64fedf7ad065be7f2c487c8c2.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.srt"
+dest_files=["res://.godot/imported/wolf-idf-israeli-airstrike.srt-d3d56bc64fedf7ad065be7f2c487c8c2.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://cuwpo8gh0wm1w"
+path="res://.godot/imported/we-cant-take-it-journalist.srt-3d32dfe7e914a780ba8b4403c35f212c.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/we-cant-take-it-journalist.srt"
+dest_files=["res://.godot/imported/we-cant-take-it-journalist.srt-3d32dfe7e914a780ba8b4403c35f212c.res"]
+
+[params]
+

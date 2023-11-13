@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://dycgfdbru50y0"
+path="res://.godot/imported/ta-nehsis-coates-democracynow.srt-605270a39fefc27e5264ca65c2015074.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/ta-nehsis-coates-democracynow.srt"
+dest_files=["res://.godot/imported/ta-nehsis-coates-democracynow.srt-605270a39fefc27e5264ca65c2015074.res"]
+
+[params]
+

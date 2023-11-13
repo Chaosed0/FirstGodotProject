@@ -20,6 +20,8 @@ The anxiousness makes you get out of bed.
 
 You get out of bed feeling energized and ready to get to work.
 
+-
+
 -> common_morning ->
 -> common_bus_ride ->
  
@@ -45,7 +47,9 @@ Your coworkers have already arrived at work, and they are chatting about the bak
     -- The conversation comes to a close. You go to sit at your desk, but one of the designers leans over and reminds you that there's a sync meeting today. That's right - you'd forgotten.
 
 * [Sit down at your desk. It's time to get work done.]
-    No time for this conversation. There's bugs to crush. Ah, but - on your calendar is a meeting invite. You'd forgotten about this sync meeting with the designers. You sigh. The bugs will have to wait.
+    No time for this conversation. There's bugs to crush.
+    
+    You go to sit at your desk, but one of the designers leans over and reminds you that there's a sync meeting today. That's right - you'd forgotten. You sigh. Bugs will have to wait.
     
 - You head over to the meeting room, and the designers slowly gather. Your producer pulls up the agenda, and you start discussing design. It's too late to change anything for the release version of the game, but you need to start thinking about the post-release content already. It's a tricky balance to strike, doing a release while also working on new content, but it's a necessary one.
 

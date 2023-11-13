@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://hmhl407vm38n"
+path="res://.godot/imported/blinken-protestors.srt-9d8d7f9ff8c282465ac88eda06b5d0c7.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/blinken-protestors.srt"
+dest_files=["res://.godot/imported/blinken-protestors.srt-9d8d7f9ff8c282465ac88eda06b5d0c7.res"]
+
+[params]
+
