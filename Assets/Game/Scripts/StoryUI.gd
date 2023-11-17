@@ -26,6 +26,7 @@ signal on_story_tween_complete
 signal on_story_complete(story : InkStory)
 
 func _ready():
+	clip_contents = false
 	mouse_filter = Control.MOUSE_FILTER_PASS
 
 	modulate.a = 0
@@ -70,6 +71,15 @@ func continue_story(is_first : bool):
 		complete_story()
 		return
 
+	var tags : Array = story.GetCurrentTags()
+
+	for tag in tags:
+		print("TAG:", tag)
+
+		if tag.begins_with("LINK:"):
+			var link_address : String = tag.substr(5).strip_edges()
+			OS.shell_open(link_address)
+
 	if _currentTween != null:
 		skip_tween()
 
@@ -107,7 +117,7 @@ func continue_story(is_first : bool):
 	container.move_child(bottomSpacer, container.get_child_count())
 	await get_tree().process_frame
 	
-	_currentTween = get_tree().create_tween()
+	_currentTween = self.create_tween()
 	_currentTween.set_parallel()
 	_currentTween.finished.connect(on_tween_finished)
 
@@ -128,8 +138,7 @@ func continue_story(is_first : bool):
 
 	if _currentStoryText != null:
 		_currentStoryText.start_typeout(_currentTween)
-		_currentTween.chain()
-		_currentTween.tween_callback(Callable(self, "on_tween_complete"))
+		_currentTween.chain().tween_callback(Callable(self, "on_tween_complete"))
 
 	for button in _currentChoices:
 		button.initialize_tween(_currentTween)
@@ -150,7 +159,6 @@ func on_choice_pressed(index : int):
 	continue_story(false)
 
 func complete_story():
-	modulate.a = 0
 	on_story_complete.emit(story)
 
 func on_tween_finished():
@@ -175,8 +183,3 @@ func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		skip_tween()
 		accept_event()
-
-func _has_point(point : Vector2):
-	var rect : Rect2 = Rect2(Vector2.ZERO, size)
-	print(rect, " ", point, " ", rect.has_point(point))
-	return rect.has_point(point)

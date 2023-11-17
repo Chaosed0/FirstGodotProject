@@ -86,7 +86,7 @@ You start discussing a particularly contentious part of the combat design in Dog
  
 === Day_2_End ===
 
- It's {get_time()}. Time to head home. You know you could work more, but your company has a no-crunch policy, and it's better if you follow it and stay healthy.
+ It's {get_time()}. {time < 1800:You know you could work more, but your company has a no-crunch policy, and it's better if you follow it and stay healthy. Time to head home.|Your company has a no-crunch policy, but you really got into solving as many bugs as you can. You'd better take some time off after release to make sure you don't burn out. For now, it's time to head home.}
 
 You walk to the bus stop. You end up having to wait twenty minutes for the next bus. Sometimes a bus in the schedule is mysteriously skipped, and you have no idea why. It puts you in a bit of a bad mood.
 
@@ -106,6 +106,6 @@ After dinner, you wash your plates up. What will you do now?
 
 After you finish your post-dinner activity, your partner comes home. It's quite late, so you kiss them and then head straight to sleep.
 
- * [Continue]
+ * [You get some sleep.]
  
 ->->

@@ -38,7 +38,8 @@ func on_story_tween_begin():
 	skipButton.disabled = true
 
 func on_story_tween_complete():
-	_skipTimer.start(skipTime)
+	if _storyUI.story.FetchVariable("skip_allowed"):
+		_skipTimer.start(skipTime)
 
 func on_story_complete():
 	_skipTimer.stop()

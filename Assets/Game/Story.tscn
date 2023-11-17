@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://rx5mrmc2csae"]
+[gd_scene load_steps=43 format=3 uid="uid://rx5mrmc2csae"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
 [ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
@@ -27,7 +27,6 @@
 [ext_resource type="Resource" uid="uid://jxblu73ds7h1" path="res://Assets/Game/Audio/quds-al-shifa-cut.srt" id="22_dt1ji"]
 [ext_resource type="Resource" uid="uid://cgoxlkpidqes6" path="res://Assets/Game/Audio/child-dead-father.srt" id="23_p6ku7"]
 [ext_resource type="AudioStream" uid="uid://dkspjb7b3r4x8" path="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.ogg" id="25_no0ea"]
-[ext_resource type="Resource" uid="uid://ccwchsvar2jul" path="res://Assets/Game/Audio/fadi-conditions-gaza.srt" id="25_pilmb"]
 [ext_resource type="AudioStream" uid="uid://laiw8xbdj8oj" path="res://Assets/Game/Audio/wael-al-dadouh.ogg" id="26_c1f5q"]
 [ext_resource type="AudioStream" uid="uid://ck1wyl3i3jdf0" path="res://Assets/Game/Audio/us-geneva-convention.ogg" id="28_fg6jk"]
 [ext_resource type="AudioStream" uid="uid://58llk5lu8lcm" path="res://Assets/Game/Audio/hospital-bombings.ogg" id="29_ee3tt"]
@@ -40,7 +39,6 @@
 [ext_resource type="AudioStream" uid="uid://bs45d5n0mfjjo" path="res://Assets/Game/Audio/children-gaza-press-conference.ogg" id="35_dy1iv"]
 [ext_resource type="AudioStream" uid="uid://boxh8buypfidy" path="res://Assets/Game/Audio/quds-al-shifa-cut.ogg" id="36_b3rjt"]
 [ext_resource type="AudioStream" uid="uid://babct21cij0bf" path="res://Assets/Game/Audio/child-dead-father.ogg" id="37_ncfbp"]
-[ext_resource type="AudioStream" uid="uid://buh42jbs72qdy" path="res://Assets/Game/Audio/fadi-conditions-gaza.ogg" id="41_52orw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
@@ -53,10 +51,10 @@ script = ExtResource("8_iopvy")
 
 [node name="Story" type="Node" node_paths=PackedStringArray("skipButton")]
 script = ExtResource("1_frdli")
-knot_path = "FullGame"
+knot_path = "Main"
 skip_knot_path = "GameLaunch"
 skipButton = NodePath("HUD/StoryUI/SkipButton")
-skipTime = 90.0
+skipTime = 75.0
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -168,15 +166,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -176.5
+offset_left = -136.0
 offset_top = -29.0
-offset_right = 176.5
+offset_right = 138.0
 offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 0.490196, 0, 1)
 theme_override_font_sizes/font_size = 14
-text = "I am not going to finish this game. Take me to the end."
+text = "I cannot continue. Just take me to the end."
 
 [node name="SubtitleLeft" type="RichTextLabel" parent="HUD"]
 layout_mode = 1
@@ -189,6 +187,8 @@ offset_bottom = -5.0
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.588235, 0.588235, 0.588235, 1)
 theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+theme_override_font_sizes/italics_font_size = 13
 bbcode_enabled = true
 text = "Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. "
 scroll_active = false
@@ -209,6 +209,8 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.588235, 0.588235, 0.588235, 1)
 theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+theme_override_font_sizes/italics_font_size = 13
 bbcode_enabled = true
 text = "Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. Subtitle text goes here. "
 scroll_active = false
@@ -221,7 +223,7 @@ storyUi = NodePath("../StoryUI")
 player = NodePath("AudioStreamPlayer")
 leftLabel = NodePath("../SubtitleLeft")
 rightLabel = NodePath("../SubtitleRight")
-srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("9_vxrq8"), ExtResource("14_xjsyx"), ExtResource("25_pilmb"), ExtResource("15_tujst"), ExtResource("21_tit7x"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("18_t6gnk"), ExtResource("19_236gv"), ExtResource("20_o66s4"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
-audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("10_ot4cl"), ExtResource("28_fg6jk"), ExtResource("41_52orw"), ExtResource("29_ee3tt"), ExtResource("35_dy1iv"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("32_wsg21"), ExtResource("33_22rt7"), ExtResource("34_ui3q3"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
+srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("14_xjsyx"), ExtResource("9_vxrq8"), ExtResource("21_tit7x"), ExtResource("15_tujst"), ExtResource("18_t6gnk"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("20_o66s4"), ExtResource("19_236gv"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
+audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("28_fg6jk"), ExtResource("10_ot4cl"), ExtResource("35_dy1iv"), ExtResource("29_ee3tt"), ExtResource("32_wsg21"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("34_ui3q3"), ExtResource("33_22rt7"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]

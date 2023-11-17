@@ -6,22 +6,26 @@
 
 You wake up to your alarm. It is {get_time()} on Tuesday, the 10th of October. The game you have been working on for three years, Dog with a Sword, is releasing on Friday - in three days.
 
-How are you feeling about the release of Dog with /fora Sword?
+How are you feeling about the release of Dog with a Sword?
 
 * [You are feeling anxious.]
-Naturally, you are feeling anxious about the release. You've been working on Dog with a Sword for three years. This release will be the first time the public sees it, and while you're looking forward to sharing it with them, you don't know how they'll react.
+Naturally, you are feeling anxious about the release. You've been working on Dog with a Sword for three years. The public will see it for the first time in just three days. You're looking forward to sharing it with everyone, but you don't know how it will be received.
 
 The anxiousness makes you get out of bed.
+~ morning_anxious_count++
 
 * [You are feeling excited.]
 You're quite excited to share what you've got with the world. You think the game is in a great shape, and you're confident that the public will receive the game well.
 
 You get out of bed feeling energized and ready to get to work.
+~morning_excited_count++
 
 - 
 
 -> common_morning ->
 -> common_bus_ride ->
+
+~skip_allowed=true
 
 -
 * [...]
@@ -126,6 +130,6 @@ The two of you prepare dinner. You tell them about your day:
 
 You get into bed with your partner. You tell them that you love them, and she does the same back to you. The lights go out, and you fall asleep.
 
-* [Continue]
+* [You get some decent sleep.]
  
 ->->

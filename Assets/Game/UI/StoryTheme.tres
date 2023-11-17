@@ -1,9 +1,15 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dspuh7p7f5rfg"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dspuh7p7f5rfg"]
 
+[ext_resource type="FontFile" uid="uid://dwkoioc4y3m2v" path="res://Assets/Game/Fonts/JosefinSans-Bold.ttf" id="1_nq4bn"]
 [ext_resource type="FontFile" uid="uid://b6kj23mh2arln" path="res://Assets/Game/Fonts/JosefinSans-Regular.ttf" id="1_u0f2y"]
+[ext_resource type="FontFile" uid="uid://grmcix53xo6k" path="res://Assets/Game/Fonts/JosefinSans-Italic.ttf" id="2_2ph14"]
+[ext_resource type="FontFile" uid="uid://dpm5o6ci6sq1n" path="res://Assets/Game/Fonts/JosefinSans-BoldItalic.ttf" id="2_w6yvt"]
 
 [resource]
 default_base_scale = 1.0
 default_font = ExtResource("1_u0f2y")
 default_font_size = 18
 RichTextLabel/constants/line_separation = 3
+RichTextLabel/fonts/bold_font = ExtResource("1_nq4bn")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_w6yvt")
+RichTextLabel/fonts/italics_font = ExtResource("2_2ph14")

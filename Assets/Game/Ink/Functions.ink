@@ -6,6 +6,9 @@ VAR morning_anxious_count = 0
 VAR morning_excited_count = 0
 VAR watched_baking_show = false
 VAR played_video_game = false
+VAR bus_front=0
+VAR bus_back=0
+VAR skip_allowed=false
 
 LIST bug1_names = (cat_enemy),(wood_wall),(blue_orb),(big_red_hat),(katana_sword),(dash_ability)
 VAR bug1_fixed = ()

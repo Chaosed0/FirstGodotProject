@@ -4,14 +4,23 @@
 ~ day_count = 2
 ~ time = 900
 
-You wake up to your alarm. It is 9AM on Thursday, the 12th of October. The game you have been working on for three years, Dog with a Sword, is releasing on Friday - in one day.
+You wake up to your alarm. It is 9AM on Thursday, the 12th of October. The game you have been working on for three years, Dog with a Sword, is releasing on Friday - tomorrow.
 
 The energy from this fact makes you bolt straight out of bed.
 
 - 
 -> common_morning ->
 
-- You sit down on one of the bus' seats. You think about reading or listening to a podcast, but instead, you:
+-
+Today, there is a houseless man sitting near {bus_front>bus_back:the front|the back} of the bus. He is speaking softly to no one.
+
++ [Sit near the front of the bus.]
+You sit down near the front of the bus. You do your best to ignore the houseless man's soft chatter.
+
++ [Sit near the back of the bus.]
+You sit down at the back of the bus. Best to be safe.
+
+- You think about reading or listening to a podcast, but instead, you:
 
 * [Think about Dog with a Sword.]
     You can't really help it. The game comes out tomorrow. You sit there and think about Dog with a Sword. About how you think the reception will be, about whether the company will make enough money to keep going, about what your friends will think about the game.
@@ -20,9 +29,13 @@ The energy from this fact makes you bolt straight out of bed.
     
     You stare out the window, a storm in your mind, until the bus stops at your office.
     ~add_time(100)
+    
+-
  
- -
- 
+* [...]
+
+-
+
 About half the team usually works from home. However, when you get to the office, almost everyone is at their desks. It seems like the air is charged with creative energy. Folks want to land this game. It's the most important thing in their life right now.
 
 You go straight to your desk and sit down. It's {get_time()}. You have until {get_time_custom(break_time)} to get as much work done as you can. Yesterday, QA found {addl_bug_count} more bugs. There are {bug_count} bugs left to fix.

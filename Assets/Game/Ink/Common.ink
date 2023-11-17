@@ -1,7 +1,15 @@
 
 === common_bus_ride ===
 
-You sit down on one of the bus' seats.
++ [Sit near the front of the bus.]
+You sit down near the front of the bus.
+~bus_front++
+
++ [Sit near the back of the bus.]
+You sit down at the back of the bus.
+~bus_back++
+
+-
 
 + [Pull out a book.]
     {You pull a book out that you got at the library the other day. You lose yourself in the book until you get off the bus.|You continue where you left off in the book. It's very engrossing.|You continue where you left off. You're having trouble concentrating this time, but you get through as much as you can.|You continue where you left off. You really like this book.|You continue where you left off. Time passes quickly until you get off the bus.}

@@ -78,13 +78,13 @@ func on_finished_playing():
 	_currentAudioIndex = (_currentAudioIndex + 1) % srtFiles.size()
 
 	if _currentAudioIndex % 2 == 0:
-		_leftNonEffectText = _leftNonEffectText + _leftCurrentEffectText
+		_leftNonEffectText = str(_leftNonEffectText, " ", _leftCurrentEffectText)
 		_leftCurrentEffectText = ""
 
 		if !_leftNonEffectText.is_empty():
 			_leftNonEffectText += "\n\n"
 	else:
-		_rightNonEffectText = _rightNonEffectText + _rightCurrentEffectText
+		_rightNonEffectText = str(_rightNonEffectText, " ", _rightCurrentEffectText)
 		_rightCurrentEffectText = ""
 
 		if !_rightNonEffectText.is_empty():

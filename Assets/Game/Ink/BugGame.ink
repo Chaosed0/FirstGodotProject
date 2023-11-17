@@ -46,7 +46,7 @@ It is {get_time()}. You're trying to solve a bug.
  
  - (localization_bug_toplevel)        
  
-  + {!wtf_stew && bug1_seen_locsheet_count > 3} [What the fuck. How many times have you seen these localization bugs?]
+  + {!wtf_stew && bug1_seen_locsheet_count > 5} [What the fuck. How many times have you seen these localization bugs?]
   You're pretty sure you've seen at least {bug1_seen_locsheet_count} localization bugs. You sit there and stew for a bit. Why are there so many fucking localization bugs? Why is your process so brittle?
   
   You spends ten minutes stewing over this. At least you feel a little better at the end.
@@ -58,7 +58,7 @@ It is {get_time()}. You're trying to solve a bug.
  
   + {bug1_fixed hasnt bug1_name} [Revise the description.] -> fix ->
   
-  + [Mark it with a "won't fix" tag. This is not high-priority enough to fix.]
+  + {bug1_seen_locsheet_count > 2} [Mark it with a "won't fix" tag. This is not high-priority enough to fix.]
   You spend a few minutes moving bugs around the task tracker. The number of bugs stays the same.
   ~ add_time(3)
   
@@ -218,7 +218,7 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
 
  ~ temp replay_steps = 0
 
- To open up the replay, you must do the following in order:
+ To get data from the replay, you must do the following in order:
  
  1. Find the version of the game where the crash occurred
  2. Check out that version of the game from source control
@@ -239,7 +239,7 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
  - 1: You have obtained the version of the game where the crash occurred.
  - 2: You have checked out a version of the game from source control.
  - 3: You have the core-replay scene open.
- - 4: Load the replay file.
+ - 4: You've loaded the replay file.
  - 5: You have played the replay back.
  }
  
