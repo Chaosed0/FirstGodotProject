@@ -43,7 +43,7 @@ INCLUDE Common.ink
 ~ break_time = 1230
 -> Day_3 ->
 -> BugGame ->
-~ break_time = 1600
+~ break_time = 1500
 -> Day_3_Lunch ->
 -> BugGame ->
 -> Launch_Party ->

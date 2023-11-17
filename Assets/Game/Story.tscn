@@ -51,9 +51,12 @@ bg_color = Color(0.0392157, 0.0392157, 0.0588235, 1)
 [sub_resource type="RichTextEffect" id="RichTextEffect_t1o02"]
 script = ExtResource("8_iopvy")
 
-[node name="Story" type="Node"]
+[node name="Story" type="Node" node_paths=PackedStringArray("skipButton")]
 script = ExtResource("1_frdli")
 knot_path = "FullGame"
+skip_knot_path = "GameLaunch"
+skipButton = NodePath("HUD/StoryUI/SkipButton")
+skipTime = 90.0
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -158,6 +161,23 @@ layout_mode = 2
 [node name="BottomSpacer" type="Control" parent="HUD/StoryUI/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="SkipButton" type="Button" parent="HUD/StoryUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.5
+offset_top = -29.0
+offset_right = 176.5
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.490196, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "I am not going to finish this game. Take me to the end."
+
 [node name="SubtitleLeft" type="RichTextLabel" parent="HUD"]
 layout_mode = 1
 anchors_preset = 9
@@ -201,7 +221,7 @@ storyUi = NodePath("../StoryUI")
 player = NodePath("AudioStreamPlayer")
 leftLabel = NodePath("../SubtitleLeft")
 rightLabel = NodePath("../SubtitleRight")
-srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("25_pilmb"), ExtResource("9_vxrq8"), ExtResource("14_xjsyx"), ExtResource("15_tujst"), ExtResource("21_tit7x"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("18_t6gnk"), ExtResource("19_236gv"), ExtResource("20_o66s4"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
-audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("41_52orw"), ExtResource("10_ot4cl"), ExtResource("28_fg6jk"), ExtResource("29_ee3tt"), ExtResource("35_dy1iv"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("32_wsg21"), ExtResource("33_22rt7"), ExtResource("34_ui3q3"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
+srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("9_vxrq8"), ExtResource("14_xjsyx"), ExtResource("25_pilmb"), ExtResource("15_tujst"), ExtResource("21_tit7x"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("18_t6gnk"), ExtResource("19_236gv"), ExtResource("20_o66s4"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
+audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("10_ot4cl"), ExtResource("28_fg6jk"), ExtResource("41_52orw"), ExtResource("29_ee3tt"), ExtResource("35_dy1iv"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("32_wsg21"), ExtResource("33_22rt7"), ExtResource("34_ui3q3"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]

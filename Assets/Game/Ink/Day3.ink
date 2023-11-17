@@ -19,6 +19,7 @@ The energy from this fact makes you bolt straight out of bed.
     You know it's a little silly. It's a game about a dog, with a sword. You know there's lots more important stuff happening in the world. And yet, you still can't stop thinking about it.
     
     You stare out the window, a storm in your mind, until the bus stops at your office.
+    ~add_time(100)
  
  -
  

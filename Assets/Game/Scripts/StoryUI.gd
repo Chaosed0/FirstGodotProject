@@ -11,8 +11,6 @@ extends Control
 @export var container : VBoxContainer
 @export var debug : bool
 
-signal begin_audio_signal
-
 var _margin : float
 var _currentTween : Tween
 var _currentChoices : Array[StoryChoice]
@@ -22,9 +20,14 @@ var _didBeginAudio : bool
 var _deferredBeginAudio : bool
 var _randomizeNextChoices : bool
 
+signal begin_audio_signal
+signal on_story_tween_begin
+signal on_story_tween_complete
 signal on_story_complete(story : InkStory)
 
 func _ready():
+	mouse_filter = Control.MOUSE_FILTER_PASS
+
 	modulate.a = 0
 	_margin = content.get_theme_constant("margin_top") + content.get_theme_constant("margin_bottom") + 10
 
@@ -70,6 +73,8 @@ func continue_story(is_first : bool):
 	if _currentTween != null:
 		skip_tween()
 
+	on_story_tween_begin.emit()
+
 	var newSeparator : Control
 
 	if !is_first:
@@ -87,6 +92,8 @@ func continue_story(is_first : bool):
 	if _randomizeNextChoices:
 		indexes.shuffle()
 		_randomizeNextChoices = false
+
+	_currentChoices.clear()
 
 	for index in indexes:
 		var choice = choices[index]
@@ -122,7 +129,7 @@ func continue_story(is_first : bool):
 	if _currentStoryText != null:
 		_currentStoryText.start_typeout(_currentTween)
 		_currentTween.chain()
-		_currentTween.tween_callback(Callable(self, "begin_audio_real"))
+		_currentTween.tween_callback(Callable(self, "on_tween_complete"))
 
 	for button in _currentChoices:
 		button.initialize_tween(_currentTween)
@@ -156,7 +163,9 @@ func begin_audio():
 	if !_didBeginAudio:
 		_deferredBeginAudio = true
 
-func begin_audio_real():
+func on_tween_complete():
+	on_story_tween_complete.emit()
+
 	if _deferredBeginAudio:
 		begin_audio_signal.emit()
 		_deferredBeginAudio = false
@@ -165,4 +174,9 @@ func begin_audio_real():
 func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		skip_tween()
-		return
+		accept_event()
+
+func _has_point(point : Vector2):
+	var rect : Rect2 = Rect2(Vector2.ZERO, size)
+	print(rect, " ", point, " ", rect.has_point(point))
+	return rect.has_point(point)

@@ -7,6 +7,7 @@ It is {get_time()}. You're trying to solve a bug.
 -> bug_game_check_end
 + {debug} [< DEBUG! > localization] -> localization_bug ->
 + {debug} [< DEBUG! > crash] -> crash_bug ->
++ {debug} [< DEBUG! > broken asset] -> broken_asset ->
 + {debug} [< DEBUG! > random] -> bug_game_random ->
 + -> bug_game_random ->
 
@@ -19,6 +20,11 @@ It is {get_time()}. You're trying to solve a bug.
 
 { shuffle:
     - -> localization_bug ->
+    - -> localization_bug ->
+    - -> localization_bug ->
+    - -> broken_asset ->
+    - -> broken_asset ->
+    - -> broken_asset ->
     - -> crash_bug ->
 }
 
@@ -38,8 +44,19 @@ It is {get_time()}. You're trying to solve a bug.
 
  On this bug, QA says that the description for the {get_bug1_name()} says that it's "{bug1_description}".
  
- - (localization_bug_toplevel)
-  + [Revise the description.] -> fix ->
+ - (localization_bug_toplevel)        
+ 
+  + {!wtf_stew && bug1_seen_locsheet_count > 3} [What the fuck. How many times have you seen these localization bugs?]
+  You're pretty sure you've seen at least {bug1_seen_locsheet_count} localization bugs. You sit there and stew for a bit. Why are there so many fucking localization bugs? Why is your process so brittle?
+  
+  You spends ten minutes stewing over this. At least you feel a little better at the end.
+  ~ add_time(10)
+  ~ wtf_stew = true
+  -> localization_bug_toplevel
+      
+  + {bug1_fixed has bug1_name} [Wait, haven't you fixed this one already?] -> refix ->
+ 
+  + {bug1_fixed hasnt bug1_name} [Revise the description.] -> fix ->
   
   + [Mark it with a "won't fix" tag. This is not high-priority enough to fix.]
   You spend a few minutes moving bugs around the task tracker. The number of bugs stays the same.
@@ -48,16 +65,6 @@ It is {get_time()}. You're trying to solve a bug.
   + {day_count >= 1} [Send it to someone else. Clearly this is not important enough for you to fix.]
   You spend a few minutes moving bugs around the task tracker. The number of bugs stays the same.
   ~ add_time(2)
-      
-  + {bug1_fixed has bug1_name} [Wait, haven't you fixed this one already?] -> refix ->
-        
-  + {!wtf_stew && bug1_seen_locsheet_count > 3} [What the fuck. How many times have you seen these localization bugs?]
-  You're pretty sure you've seen at least {bug1_seen_locsheet_count} localization bugs. You sit there and stew for a bit. Why are there so many fucking localization bugs? Why is your process so brittle?
-  
-  This spends ten minutes, but at least you feel a little better at the end.
-  ~ add_time(10)
-  ~ wtf_stew = true
-  -> localization_bug_toplevel
   
   -
   
@@ -66,7 +73,7 @@ It is {get_time()}. You're trying to solve a bug.
 = fix
 ~ temp rub_eyes = false
 
-You really wish there weren't so many of these description bugs, but you'll fix it.
+{Looks like an easy fix.|You think to yourself, another one of these? Where are these localization bugs coming from?|You roll your eyes. You really need to take another look at the localization process later on, but this close to release, you'd better just fix it.|You really wish there weren't so many of these description bugs, but you'll fix it.}
 ~ bug1_fixed += bug1_name
 
   + [Open the localization sheet.]
@@ -86,19 +93,19 @@ You really wish there weren't so many of these description bugs, but you'll fix 
       You open the description entry.
       
       ++++++ {bug1_seen_locsheet_count > 2} [Just fucking give up. How many times do you have to do this?]
-      The number of these description bugs just makes you want to scream. You close the project and spend 30 minutes outside. Not that it does much good.
-      ~ add_time(30)
+      The number of these description bugs just makes you want to scream. You close the project and spend 45 minutes outside. Not that it does much good.
+      ~ add_time(45)
       
       ++++++ [Set the new string key for the {get_bug1_name()}.]
       You click on the dropdown for the name. You search the new string key you added. You set the correct description. {bug1_seen_locsheet_count > 3: You lean back in your chair and sigh.}
       
-      You have fixed the bug. It took you 15 minutes.
+      You have fixed the bug. You commit to source control. You make a pull request. In total, you have spent 30 minutes.
       ~ bug_count--
-      ~ add_time(15)
+      ~ add_time(30)
        
   +++ {!rub_eyes} {bug1_seen_locsheet_count > 2} [Rub your eyes.]
   Ugh, how many of these description bugs are there? You take a break and contemplate your life.
-  ~ add_time(5)
+  ~ add_time(10)
   ~ rub_eyes = true
   -> rub_eyes_back
   
@@ -135,10 +142,12 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
         - bug1_fixed_again has bug1_name:
             This time, you go directly to the designer who broke it last time. They shake their head - no, it wasn't them.
             
-            You have a talk with all the designers. Sit them down, and go over the best practices on how to update the localization table. They all nod. In the end, though, you're unable to track down what happened, and you have to go fix it yourself anyway. This waste of a conversation took an hour, but maybe it will make for less bugs in the future.
+            You have a talk with all the designers. Sit them down, and go over the best practices on how to update the localization table. They all nod. In the end, though, you're unable to track down what happened, and you have to go fix it yourself anyway.
+            
+            This waste of a conversation took an hour, but maybe it will make for less bugs in the future.
             
             ~ addl_bug_count -= 2
-            ~ add_time(60)
+            ~ add_time(90)
             -> fix ->
             
         - else:
@@ -146,11 +155,11 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
             
             You track down exactly what went wrong with the previous localization entry and why this copy paste would have broken it. It requires lots of back and forth with the designer who copy-pasted the sheet.
             
-            In the end, you fix the bug, and you give the designer some tips on how they should be copy/pasting into the sheet, but it takes you half an hour. At least this won't happen again... Hopefully, anyway.
+            In the end, you fix the bug, and you give the designer some tips on how they should be copy/pasting into the sheet, but it takes you 45 minutes. At least this won't happen again... Hopefully, anyway.
             
             ~ addl_bug_count -= 1
             ~ bug1_fixed_again += bug1_name
-            ~ add_time(30)
+            ~ add_time(45)
         }
         
         ++ [Nevermind. It's faster to just fix the bug.]
@@ -211,14 +220,12 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
 
  To open up the replay, you must do the following in order:
  
- 1. Look at the log file
- 2. Find the version of the game where the crash occurred
- 3. Check out that version of the game from source control
- 4. Open up the core-replay scene
- 5. Enter playmode
- 6. Load the replay file
- 7. Play the replay back until the last frame
- 8. Inspect the console
+ 1. Find the version of the game where the crash occurred
+ 2. Check out that version of the game from source control
+ 3. Open up the core-replay scene
+ 4. Load the replay file
+ 5. Play the replay back until the last frame
+ 6. Inspect the console
  
  This will give you a hint on where the crash is. Each of these steps will take a few minutes.
  
@@ -229,78 +236,59 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
  
  {replay_steps:
  - 0:
- - 1: You are looking at the log file.
- - 2: You have obtained the version of the game where the crash occurred.
- - 3: You have checked out a version of the game from source control.
- - 4: You have the core-replay scene open.
- - 5: You have entered playmode.
- - 6: You have loaded the replay file.
- - 7: You have played the replay back.
+ - 1: You have obtained the version of the game where the crash occurred.
+ - 2: You have checked out a version of the game from source control.
+ - 3: You have the core-replay scene open.
+ - 4: Load the replay file.
+ - 5: You have played the replay back.
  }
  
  {debug: < DEBUG: replay_steps is {replay_steps} >}
  
  ~ shuffle_next_choices()
  
- + [Look at the log file]
-    {replay_steps == 0:
-        ~replay_steps++
-        You open up the log file from the crash report.
-    - else:
-        You open up the log file again, but stare at it blankly. Didn't you already open this?
-    }
- 
  + [Find the version of the game where the crash occurred]
-    {replay_steps > 1: You try to find the version where the crash occurred. Wait... You already did this.}
-    {replay_steps < 1: You haven't opened the log file yet. You can't find the version without the log file.}
-    { replay_steps == 1:
+    {replay_steps < 0: You haven't opened the log file yet. You can't find the version without the log file.}
+    { replay_steps == 0:
         ~replay_steps++
-        You scan the log file until you find the version marker. Bingo.
+        You open up the log file from the bug report and scan the log file until you find the version marker.
     }
     
  + [Check out the correct version of the game from source control]
-    {replay_steps < 2: You open up your source control software to check out the correct version, but you don't know the version to check out yet.}
-    {replay_steps > 2: You open up your source control software to check out the correct version, but you've already checked out the correct version.}
-    { replay_steps == 2:
+    {replay_steps < 1: You open up your source control software to check out the correct version, but you don't know the version to check out yet.}
+    {replay_steps > 1: You open up your source control software to check out the correct version, but you realize that you've already checked out the correct version.}
+    { replay_steps == 1:
         ~replay_steps++
         You check out the correct version of the game from source control.
     }
  
  + [Open up the core-replay scene]
-    {replay_steps < 3: You fire up Unity and open the core-replay scene, but sigh as you realize you don't have the right game version open.}
-    {replay_steps > 3: You already have the core-replay scene open.}
-    { replay_steps == 3:
+    {replay_steps < 2: You fire up Unity and open the core-replay scene, but sigh as you realize you don't have the right game version open.}
+    {replay_steps > 2: You already have the core-replay scene open.}
+    { replay_steps == 2:
         ~replay_steps++
         You fire up Unity and open the core-replay scene.
     }
   
- + [Enter playmode]
-    {replay_steps < 4: You enter playmode, but slap your forehead. You haven't even opened the right scene yet.}
-    {replay_steps > 4: You're already in playmode. }
-    {replay_steps == 4:
+ + [Load the replay file]
+    {replay_steps < 3: You try to load the replay file, but slap your forehead. You haven't even opened the right scene yet.}
+    {replay_steps > 3: You've already loaded the replay file }
+    {replay_steps == 3:
         ~replay_steps++
-        You put Unity into play mode.
+        You put Unity into play mode. You load up the replay file. The replay playback window opens up.
     }
  
- + [Load the replay file]
-    {replay_steps < 5: You try to load the replay, but you haven't entered playmode in the replay scene yet.}
-    {replay_steps > 5: You have already loaded the replay file.}
-    {replay_steps == 5:
-        ~replay_steps++
-        You load up the replay file. The replay window opens up.
-    }
-    
  + [Play the replay]
-    {replay_steps < 6: The replay hasn't been loaded yet.}
-    {replay_steps > 6: You've already played the replay forward.}
-    {replay_steps == 6:
+    {replay_steps < 4: The replay hasn't been loaded yet.}
+    {replay_steps > 4: You've already played the replay forward.}
+    {replay_steps == 4:
         ~replay_steps++
         You play the replay back until the last frame.
     }
     
  + [Inspect the console]
-    {replay_steps < 7: The replay hasn't been loaded yet.}
-    {replay_steps == 7:
+    {replay_steps < 5: The replay hasn't been loaded yet.}
+    {replay_steps == 5:
         ~replay_steps++
         You take a look at the console. Great - there's the data you needed. You have {bug2_progress == 0:a | another} hint as to where the crash might be.
 
@@ -313,7 +301,7 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
     ->->
  
  -
- ~ add_time(5)
+ ~ add_time(10)
  -> replay_debug
  
 = use_crash_dump
@@ -440,7 +428,8 @@ You lean back. Your head is heavy. You've just wasted 30 minutes, and now you ha
   ~ temp repro_tries = 0
   Trying to reproduce the crash, even with good reproduction steps from QA feels like it's up to luck. Sometimes QA has great reproduction steps. Sometimes the crash was caused by something totally random happening offscreen. It might take you a while to get a hint to the crash, or it might happen instantly.
   
-  ~ temp random_max = RANDOM(3, 10)
+  ~ temp random_max = RANDOM(2, 10)
+  ~ random_max = random_max * random_max
   ~ temp repro_max = 10
   
   - (try_repro_options)
@@ -496,11 +485,78 @@ You lean back. Your head is heavy. You've just wasted 30 minutes, and now you ha
      - else: ~add_time(90)
     }
     
+    ~ bug_count--
+    
     ->->
         
+=== broken_asset ===
+    ~ temp asked_designer = false
+    ~ temp asked_artist = false
+    ~ temp asked_audio = false
+    
+    This bug from QA notes that there is a broken asset. The notes on the bug state: {get_bug3_name()}.
+    
+    Who do you ask for help on tracking down this issue?
+    
+    - (broken_asset_choices)
+    
+    + {!asked_designer} [Ask a designer.]
+    ~ asked_designer = true
+    
+    {get_bug3_fix():
+        - bug3_solution.designer:
+            {get_bug3_special_note()}
+            ~ increment_bug3_count()
+            ~ add_time(20)
+            Asking around and walking them through the fix took 20 minutes.
+        - else:
+            The designer shrugs. Seems that it's not their problem. You spend ten minutes chatting with them.
+            ~ add_time(10)
+            -> broken_asset_choices
+    }
+    
+    
+    + {!asked_artist} [Ask an artist.]
+    ~ asked_artist = true
+    
+    {get_bug3_fix():
+        - bug3_solution.art:
+            {get_bug3_special_note()}
+            ~ increment_bug3_count()
+            ~ add_time(20)
+            Asking around and walking them through the fix took 20 minutes.
+        - else:
+            The artist shrugs. Seems that it's not their problem. You spend ten minutes chatting with them.
+            ~add_time(10)
+            -> broken_asset_choices
+    }
+    
+    + {!asked_audio} [Ask an audio person.]
+    ~ asked_audio = true
+    
+    {get_bug3_fix():
+        - bug3_solution.audio:
+            {get_bug3_special_note()}
+            ~ increment_bug3_count()
+            ~ add_time(20)
+            Asking around and walking them through the fix took 20 minutes.
+        - else:
+            The audio person shrugs. Seems that it's not their problem. You spend ten minutes chatting with them.
+            ~add_time(10)
+            -> broken_asset_choices
+    }
+    
+    ~asked_audio = true
+    
+    + [Fix it yourself.]
+    {asked_audio && asked_artist && asked_designer: It seems no one is able to help you fix the bug. You track down the fix yourself.|You track down the bug yourself. It takes a bit longer than if someone helped you.} This takes 45 minutes.
+    ~ increment_bug3_count()
+    ~ add_time(45)
 
-
-
+    -
+    ~ bug_count--
+    + [On to the next bug.]
+    ->->
 
 
 

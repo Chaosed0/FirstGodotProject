@@ -44,12 +44,16 @@ Your coworkers have already arrived at work, and they are chatting about the bak
     ** [Nah, it's silly.]
         You're not really into it, sorry. They shrug. That's okay.
         
-    -- The conversation comes to a close. You go to sit at your desk, but one of the designers leans over and reminds you that there's a sync meeting today. That's right - you'd forgotten.
+    -- The conversation comes to a close.
+    
+    ** [Head over to your desk.]
 
 * [Sit down at your desk. It's time to get work done.]
     No time for this conversation. There's bugs to crush.
     
-    You go to sit at your desk, but one of the designers leans over and reminds you that there's a sync meeting today. That's right - you'd forgotten. You sigh. Bugs will have to wait.
+- You go to sit at your desk, but one of the designers leans over and reminds you that there's a sync meeting today. That's right - you'd forgotten. You sigh. Bugs will have to wait.
+
+* [Head to the meeting room.]
     
 - You head over to the meeting room, and the designers slowly gather. Your producer pulls up the agenda, and you start discussing design. It's too late to change anything for the release version of the game, but you need to start thinking about the post-release content already. It's a tricky balance to strike, doing a release while also working on new content, but it's a necessary one.
 
@@ -63,7 +67,7 @@ You start discussing a particularly contentious part of the combat design in Dog
     
 - Eventually, everyone comes to a compromise. You're just glad that's over with. That meeting took two whole hours. It's already lunchtime.
 
-~add_time(200)
+~add_time(300)
 
 * [Scarf something down quick and get to work.]
     After that meeting, you feel particularly pressured today, so you scarf down some lunch and then head straight back to your desk.
