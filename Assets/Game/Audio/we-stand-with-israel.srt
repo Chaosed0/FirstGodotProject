@@ -1,6 +1,6 @@
 ﻿1
 00:00:01,032 --> 00:00:03,032
- This was an act of sheer evil.
+This was an act of sheer evil.
 
 2
 00:00:04,389 --> 00:00:06,992

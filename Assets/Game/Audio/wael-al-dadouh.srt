@@ -1,6 +1,6 @@
 ﻿1
 00:00:01,135 --> 00:00:02,095
-Podcast host: On Wednesday,
+[i]Podcast host:[/i] On Wednesday,
 
 2
 00:00:02,127 --> 00:00:04,301
@@ -28,7 +28,7 @@ He was live on air as it landed.
 
 8
 00:00:21,311 --> 00:00:24,478
-Female translator: It's clear there is a new strike on Gaza
+[i]Female translator:[/i] It's clear there is a new strike on Gaza
 
 9
 00:00:24,664 --> 00:00:26,344
@@ -44,11 +44,11 @@ tell us what's happening.
 
 12
 00:00:33,484 --> 00:00:36,069
-Male translator: yes, Laila, I can hear you.
+[i]Male translator:[/i] yes, Laila, I can hear you.
 
 13
 00:00:38,205 --> 00:00:39,930
-Podcast host: And he was live on air
+[i]Podcast host:[/i] And he was live on air
 
 14
 00:00:39,955 --> 00:00:42,303
@@ -64,7 +64,7 @@ And in the hospital, where he saw them.
 
 17
 00:00:49,725 --> 00:00:51,534
-Male translator: He's gone?
+[i]Male translator:[/i] He's gone?
 
 18
 00:00:57,084 --> 00:00:59,884
@@ -80,7 +80,7 @@ We belong to God, and to him, we shall return.
 
 21
 00:01:11,697 --> 00:01:13,656
-Podcast host: They were in central Gaza,
+[i]Podcast host:[/i] They were in central Gaza,
 
 22
 00:01:13,760 --> 00:01:16,763

@@ -22,7 +22,7 @@ nodes/Move/position = Vector2(540, 200)
 nodes/MoveBlend/node = SubResource("AnimationNodeBlend2_ghwtt")
 nodes/MoveBlend/position = Vector2(740, 100)
 nodes/output/position = Vector2(900, 100)
-node_connections = [&"output", 0, &"MoveBlend", &"MoveBlend", 0, &"Idle", &"MoveBlend", 1, &"Move"]
+node_connections = [&"MoveBlend", 0, &"Idle", &"MoveBlend", 1, &"Move", &"output", 0, &"MoveBlend"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gb4en"]
 advance_mode = 2

@@ -24,45 +24,56 @@ Congratulations! Dog with a Sword has come out.
 * ...
 
 -
-* [Meanwhile, the death toll in Palestine has reached over 10000.]
-
-"[i]Evidently the happy man only feels at ease because the unhappy bear their burdens in silence, and without that silence happiness would be impossible.[/i]"
+* Meanwhile, the death toll in Palestine has reached over 10000.
 
 -
-* [Israel is bombing hospitals.]
-
-[i]"It’s a case of general hypnotism. There ought to be behind the door of every happy, contented man some one standing with a hammer continually reminding him with a tap that there are unhappy people..."[/i]
+* Israel is bombing hospitals.
 
 -
-* [Journalists are killed for showing the truth.]
-
-[i]"But there is no man with a hammer; the happy man lives at his ease..."[/i]
+* Journalists are killed for showing the truth.
 
 -
-* [Entire families are obliterated.]
-
-[i]"Trivial daily cares faintly agitate him like the wind in the aspen-tree — and all goes well."[/i]
-
- \- Gooseberries
- Anton Chekhov
+* Entire families are obliterated.
 
 -
-* Perhaps we can do what we love, but we must also take action.
+* [Can we do what we love while ignoring evil?]
+
+...
+
+Later that weekend, after the release, you have a call with your activist friend about the Palestinian massacre. They point you to some resources on what you can do to help.
 
 - (call_to_action)
 
 * [Call your US state representatives and support a ceasefire.]
 # LINK: https:\/\/act.uscpr.org\/a\/callforgaza
-If you are not in the US, please call any relevant official.
+A link has been opened.
+If you are not in the US, please call any relevant government representative.
 -> call_to_action
 * [Donate to organizations sending aid to Palestine.]
+A link has been opened.
 Donate as much or as little as you can give. Every amount helps.
 # LINK: https:\/\/act.uscpr.org\/a\/maindonate
 -> call_to_action
 * {CHOICE_COUNT() == 0} [Take other actions.]
-# LINK: https:\/\/uscpr.org\/take-action\/
+A link has been opened.
+# LINK: https:\/\/ceasefiretoday.com\/
 * ->
 
-- Thank you for taking action.
+- You feel a little better about the whole thing. It's the least you can do.
+
+* [Credits]
+
+This is a piece of interactive fiction by Edward Lu.
+
+Deepest appreciation to all the brave civilian journalists, Palestinian press, and translators who produced the content used in this piece. You guided my hand. I have no words for the bravery I saw in your videos.
+
+-
+
+* [Sources for audio content]
+# LINK: https:\/\/docs.google.com\/document\/d\/1G738HSE32VvwlVoJWjca_5JTALH7fRj4XgwhWCEqRjc\/edit?usp=sharing
+A link has been opened.
+
+-
+* [Clicking this will quit the game. Thank you for playing.]
 
 - ->->

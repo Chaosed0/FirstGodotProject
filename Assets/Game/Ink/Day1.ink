@@ -23,9 +23,8 @@ You get out of bed feeling energized and ready to get to work.
 - 
 
 -> common_morning ->
--> common_bus_ride ->
-
 ~skip_allowed=true
+-> common_bus_ride ->
 
 -
 * [...]
@@ -83,7 +82,9 @@ Today, everyone is talking about the layoffs that are happening all around the g
 
 Before everyone gets back to work, the creative director reminds everyone about the launch party on Thursday, two days from now.
 
-It's {get_time()}. You have until {get_time_custom(break_time)}, when you will go home, to get as much work done as you can. There are {bug_count} bugs left to fix.
+* [Head back to your desk.]
+
+- It's {get_time()}. You have until {get_time_custom(break_time)}, when you will go home, to get as much work done as you can. There are {bug_count} bugs left to fix.
 
 * [Time to crush bugs.]
  

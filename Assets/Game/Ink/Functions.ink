@@ -142,7 +142,7 @@ VAR time = 1000
     ~ temp daytime = "AM"
     ~ temp time_of_day = custom_time
     
-    { custom_time > 1200:
+    { custom_time >= 1200:
         ~ daytime = "PM"
     }
         
@@ -150,7 +150,7 @@ VAR time = 1000
         ~ time_of_day = time_of_day + 1100
     }
         
-    { custom_time > 1300:
+    { custom_time >= 1300:
         ~ time_of_day = time_of_day - 1200
     }
         

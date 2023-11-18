@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,336 --> 00:00:02,109
-Blinken: - not, shrinking back.
+[i]Blinken:[/i] - not, shrinking back.
 
 2
 00:00:02,242 --> 00:00:05,148
@@ -12,7 +12,7 @@ not, in the face of-
 
 4
 00:00:06,820 --> 00:00:09,059
-Protestor: Stop this brutal massacre in Gaza!
+[i]Protestor:[/i] Stop this brutal massacre in Gaza!
 
 5
 00:00:09,152 --> 00:00:11,894
@@ -20,11 +20,11 @@ The U.S. is supporting a brutal massacre!
 
 6
 00:00:12,303 --> 00:00:14,436
-Coordinator: if the witness will suspend -
+[i]Coordinator:[/i] if the witness will suspend -
 
 7
 00:00:14,441 --> 00:00:17,897
-Protestor: 66% of Americans say they want a ceasefire!
+[i]Protestor:[/i] 66% of Americans say they want a ceasefire!
 
 8
 00:00:17,985 --> 00:00:20,674
@@ -88,5 +88,5 @@ Ceasefire now!
 
 23
 00:00:51,078 --> 00:00:54,918
-Coordinator: Thank you Senator Blinken, if you can continue.
+[i]Coordinator:[/i] Thank you Senator Blinken, if you can continue.
 

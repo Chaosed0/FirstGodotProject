@@ -1,10 +1,10 @@
 ﻿1
 00:00:01,492 --> 00:00:02,880
-Man 1: Who are you looking for?
+[i]Man 1:[/i] Who are you looking for?
 
 2
 00:00:03,571 --> 00:00:05,251
-Man 2: My four children
+[i]Man 2:[/i] My four children
 
 3
 00:00:05,579 --> 00:00:06,939
@@ -16,11 +16,11 @@ Oh god.
 
 5
 00:00:13,917 --> 00:00:15,651
-Man 1: May God reward you.
+[i]Man 1:[/i] May God reward you.
 
 6
 00:00:15,984 --> 00:00:17,784
-Man 2: Oh my beloved God...
+[i]Man 2:[/i] Oh my beloved God...
 
 7
 00:00:17,813 --> 00:00:19,622
@@ -32,11 +32,11 @@ I wish I died instead.
 
 9
 00:00:23,005 --> 00:00:25,005
-Man 1: They went ahead of you to heaven.
+[i]Man 1:[/i] They went ahead of you to heaven.
 
 10
 00:00:26,349 --> 00:00:28,815
-Man 2: What did they do!! My dears...
+[i]Man 2:[/i] What did they do!! My dears...
 
 11
 00:00:29,095 --> 00:00:30,829
@@ -48,7 +48,7 @@ Man 2: What did they do!! My dears...
 
 13
 00:00:36,957 --> 00:00:38,957
-Man 1: They are in heaven, my dear,
+[i]Man 1:[/i] They are in heaven, my dear,
 
 14
 00:00:39,737 --> 00:00:41,602
@@ -64,7 +64,7 @@ There is no God but Allah.
 
 17
 00:00:49,208 --> 00:00:50,728
-Man 2: My children!
+[i]Man 2:[/i] My children!
 
 18
 00:00:55,420 --> 00:00:56,933
@@ -80,7 +80,7 @@ I can't hear you...
 
 21
 00:01:05,338 --> 00:01:06,962
-Man 2: Salma! [His daughter's name]
+Salma! [His daughter's name]
 
 22
 00:01:07,393 --> 00:01:08,336

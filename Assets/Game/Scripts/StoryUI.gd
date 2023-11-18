@@ -74,10 +74,9 @@ func continue_story(is_first : bool):
 	var tags : Array = story.GetCurrentTags()
 
 	for tag in tags:
-		print("TAG:", tag)
-
 		if tag.begins_with("LINK:"):
 			var link_address : String = tag.substr(5).strip_edges()
+			print("LINK ", link_address)
 			OS.shell_open(link_address)
 
 	if _currentTween != null:
@@ -105,14 +104,17 @@ func continue_story(is_first : bool):
 
 	_currentChoices.clear()
 
+	var i : int = 0
+
 	for index in indexes:
 		var choice = choices[index]
 		var button : StoryChoice = choiceScene.instantiate()
-		button.initialize(choice.GetText(), choice.GetIndex())
+		button.initialize(choice.GetText(), choice.GetIndex(), i)
 
 		button.on_choice_chosen.connect(on_choice_pressed)
 		_currentChoices.append(button)
 		container.add_child(button);
+		i = i + 1
 
 	container.move_child(bottomSpacer, container.get_child_count())
 	await get_tree().process_frame

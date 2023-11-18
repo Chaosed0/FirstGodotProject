@@ -41,10 +41,12 @@ func on_story_tween_complete():
 	if _storyUI.story.FetchVariable("skip_allowed"):
 		_skipTimer.start(skipTime)
 
-func on_story_complete():
+func on_story_complete(story : InkStory):
 	_skipTimer.stop()
 	skipButton.visible = false
 	skipButton.disabled = true
+
+	get_tree().quit()
 
 func on_skip_timer_finished():
 	skipButton.visible = true

@@ -46,7 +46,7 @@ You look at Twitter. {There are a lot of tragic videos on your timeline, as, unf
  
     -- (phone)
     ++ (retweet_palestine) {!did_retweet_palestine} [Retweet some of the people supporting Palestinians.]
-    {You retweet a gamedev personality who is quote-tweeting a post in support of Palestine.|You retweet a video of protesters interrupting a senate hearing, holding up bloody hands.|You retweet a video of a man standing on the rubble of his home, searching for his kids.} You feel a little better about the whole thing. It's the least you can do really.
+    {You retweet a gamedev personality who is quote-tweeting a post in support of Palestine.|You retweet a video of protesters interrupting a senate hearing, holding up bloody hands.|You retweet a video of a man standing on the rubble of his home, searching for his kids.} You feel a little better about the whole thing. It's the least you can do.
     ~did_retweet_palestine = true
     -> phone
  
@@ -85,7 +85,7 @@ You put on a jacket and head out the door. You walk down the street to your bus.
 * [Watch a cartoon.]
     You pull up a cartoon. It's a satire on adventure shows. It stars a duo of hapless teenagers who go on adventures, but can never quite get it right. In this episode, their father almost turns into a giant bug, and they fumble around for a cure until he gets cured by someone else. It gets a few chuckles out of you.
 * [Watch a baking show.]
-    You pull up a baking show. It's a competition where the best amateur bakers in the UK try to win a grand prize. You've been following this show for a few weeks, and it's always fun to pick a favorite and see how they do. This week, the theme is bread. In a twist, one of the bakers falls ill, and no one is eliminated.
+    You pull up a baking show. It's a competition where the best amateur bakers in the UK try to win a grand prize. {day_count > 1:Hearing your coworkers talk about the show piqued your interest.|You've been following this show for a few weeks, and it's always fun to pick a favorite and see how they do.} This week, the theme is bread. In a twist, one of the bakers falls ill, and no one is eliminated.
     ~ watched_baking_show = true
     
 - ->->

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://rx5mrmc2csae"]
+[gd_scene load_steps=68 format=3 uid="uid://rx5mrmc2csae"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
 [ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
@@ -10,10 +10,9 @@
 [ext_resource type="Script" path="res://Assets/Game/Scripts/AudioHandler.gd" id="8_dxvdu"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/FadeOverTimeTextEffect.gd" id="8_iopvy"]
 [ext_resource type="Resource" uid="uid://gub3sijhg57j" path="res://Assets/Game/Audio/they-bombed-my-angels-2.srt" id="9_vxrq8"]
-[ext_resource type="Resource" uid="uid://cn4sedtanu8n7" path="res://Assets/Game/Audio/we-stand-with-israel.srt" id="10_e0n1q"]
 [ext_resource type="AudioStream" uid="uid://cal8woub5lgxx" path="res://Assets/Game/Audio/they-bombed-my-angels-2.ogg" id="10_ot4cl"]
+[ext_resource type="Script" path="res://Assets/Game/Scripts/AudioPair.gd" id="11_i4whs"]
 [ext_resource type="Resource" uid="uid://18n11foow2ag" path="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.srt" id="11_mg7ib"]
-[ext_resource type="AudioStream" uid="uid://e7umap3d0ybq" path="res://Assets/Game/Audio/we-stand-with-israel.ogg" id="12_58ilu"]
 [ext_resource type="Resource" uid="uid://bf31ysmg5xk2" path="res://Assets/Game/Audio/wael-al-dadouh.srt" id="12_g14r7"]
 [ext_resource type="Resource" uid="uid://bplotfqmxu40s" path="res://Assets/Game/Audio/us-geneva-convention.srt" id="14_xjsyx"]
 [ext_resource type="Resource" uid="uid://bl7hkvqclpeyb" path="res://Assets/Game/Audio/hospital-bombings.srt" id="15_tujst"]
@@ -24,7 +23,6 @@
 [ext_resource type="Resource" uid="uid://hmhl407vm38n" path="res://Assets/Game/Audio/blinken-protestors.srt" id="19_236gv"]
 [ext_resource type="Resource" uid="uid://dbvbtafmy4klb" path="res://Assets/Game/Audio/girl-trapped-in-rubble.srt" id="20_o66s4"]
 [ext_resource type="Resource" uid="uid://023ao20mjvvu" path="res://Assets/Game/Audio/children-gaza-press-conference.srt" id="21_tit7x"]
-[ext_resource type="Resource" uid="uid://jxblu73ds7h1" path="res://Assets/Game/Audio/quds-al-shifa-cut.srt" id="22_dt1ji"]
 [ext_resource type="Resource" uid="uid://cgoxlkpidqes6" path="res://Assets/Game/Audio/child-dead-father.srt" id="23_p6ku7"]
 [ext_resource type="AudioStream" uid="uid://dkspjb7b3r4x8" path="res://Assets/Game/Audio/wolf-idf-israeli-airstrike.ogg" id="25_no0ea"]
 [ext_resource type="AudioStream" uid="uid://laiw8xbdj8oj" path="res://Assets/Game/Audio/wael-al-dadouh.ogg" id="26_c1f5q"]
@@ -37,8 +35,17 @@
 [ext_resource type="AudioStream" uid="uid://7a0hctjxqqt0" path="res://Assets/Game/Audio/senator-warren-dinner.ogg" id="33_rvd1u"]
 [ext_resource type="AudioStream" uid="uid://dovi5q5fqevil" path="res://Assets/Game/Audio/girl-trapped-in-rubble.ogg" id="34_ui3q3"]
 [ext_resource type="AudioStream" uid="uid://bs45d5n0mfjjo" path="res://Assets/Game/Audio/children-gaza-press-conference.ogg" id="35_dy1iv"]
-[ext_resource type="AudioStream" uid="uid://boxh8buypfidy" path="res://Assets/Game/Audio/quds-al-shifa-cut.ogg" id="36_b3rjt"]
 [ext_resource type="AudioStream" uid="uid://babct21cij0bf" path="res://Assets/Game/Audio/child-dead-father.ogg" id="37_ncfbp"]
+[ext_resource type="AudioStream" uid="uid://blglgjayy26c0" path="res://Assets/Game/Audio/abu-ahmad-son-sniper.ogg" id="37_vllmc"]
+[ext_resource type="Resource" uid="uid://sha132cqtfdf" path="res://Assets/Game/Audio/abu-ahmad-son-sniper.srt" id="38_5ktpl"]
+[ext_resource type="AudioStream" uid="uid://covdnqe62nx7j" path="res://Assets/Game/Audio/rozan-al-rifi.ogg" id="39_2af4p"]
+[ext_resource type="Resource" uid="uid://bs6akl6u23mah" path="res://Assets/Game/Audio/rozan-al-rifi.srt" id="40_gglic"]
+[ext_resource type="AudioStream" uid="uid://gd4id0sxxbl7" path="res://Assets/Game/Audio/al-shifa-report.ogg" id="41_pgdq7"]
+[ext_resource type="Resource" uid="uid://xvs4duc0yyy6" path="res://Assets/Game/Audio/al-shifa-report.srt" id="42_31b7i"]
+[ext_resource type="AudioStream" uid="uid://dlcuq6rw80ed8" path="res://Assets/Game/Audio/dr-hammam-alloh.ogg" id="43_em6ts"]
+[ext_resource type="Resource" uid="uid://cy342fxovol32" path="res://Assets/Game/Audio/dr-hammam-alloh.srt" id="44_kk8cb"]
+[ext_resource type="AudioStream" uid="uid://buh42jbs72qdy" path="res://Assets/Game/Audio/fadi-conditions-gaza.ogg" id="45_fhyy0"]
+[ext_resource type="Resource" uid="uid://ccwchsvar2jul" path="res://Assets/Game/Audio/fadi-conditions-gaza.srt" id="46_q2tdm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
@@ -48,6 +55,96 @@ bg_color = Color(0.0392157, 0.0392157, 0.0588235, 1)
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_t1o02"]
 script = ExtResource("8_iopvy")
+
+[sub_resource type="Resource" id="Resource_klm84"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("25_no0ea")
+subtitles = ExtResource("11_mg7ib")
+
+[sub_resource type="Resource" id="Resource_t68ku"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("26_c1f5q")
+subtitles = ExtResource("12_g14r7")
+
+[sub_resource type="Resource" id="Resource_gjlsf"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("28_fg6jk")
+subtitles = ExtResource("14_xjsyx")
+
+[sub_resource type="Resource" id="Resource_t8v12"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("10_ot4cl")
+subtitles = ExtResource("9_vxrq8")
+
+[sub_resource type="Resource" id="Resource_xglw0"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("35_dy1iv")
+subtitles = ExtResource("21_tit7x")
+
+[sub_resource type="Resource" id="Resource_1ngmq"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("32_wsg21")
+subtitles = ExtResource("18_t6gnk")
+
+[sub_resource type="Resource" id="Resource_312fc"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("29_ee3tt")
+subtitles = ExtResource("15_tujst")
+
+[sub_resource type="Resource" id="Resource_2jxbx"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("33_22rt7")
+subtitles = ExtResource("19_236gv")
+
+[sub_resource type="Resource" id="Resource_0k3ah"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("31_w135n")
+subtitles = ExtResource("16_5xydy")
+
+[sub_resource type="Resource" id="Resource_r12di"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("37_ncfbp")
+subtitles = ExtResource("23_p6ku7")
+
+[sub_resource type="Resource" id="Resource_erniw"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("30_s8itx")
+subtitles = ExtResource("17_fkdiq")
+
+[sub_resource type="Resource" id="Resource_vapd8"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("34_ui3q3")
+subtitles = ExtResource("20_o66s4")
+
+[sub_resource type="Resource" id="Resource_uf165"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("33_rvd1u")
+subtitles = ExtResource("17_kh840")
+
+[sub_resource type="Resource" id="Resource_lj6yy"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("37_vllmc")
+subtitles = ExtResource("38_5ktpl")
+
+[sub_resource type="Resource" id="Resource_a0ddc"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("39_2af4p")
+subtitles = ExtResource("40_gglic")
+
+[sub_resource type="Resource" id="Resource_d68rd"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("41_pgdq7")
+subtitles = ExtResource("42_31b7i")
+
+[sub_resource type="Resource" id="Resource_psayn"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("43_em6ts")
+subtitles = ExtResource("44_kk8cb")
+
+[sub_resource type="Resource" id="Resource_iwo2o"]
+script = ExtResource("11_i4whs")
+audio = ExtResource("45_fhyy0")
+subtitles = ExtResource("46_q2tdm")
 
 [node name="Story" type="Node" node_paths=PackedStringArray("skipButton")]
 script = ExtResource("1_frdli")
@@ -223,7 +320,6 @@ storyUi = NodePath("../StoryUI")
 player = NodePath("AudioStreamPlayer")
 leftLabel = NodePath("../SubtitleLeft")
 rightLabel = NodePath("../SubtitleRight")
-srtFiles = Array[Resource("res://addons/srt_importer/ImportedSRTFile.gd")]([ExtResource("11_mg7ib"), ExtResource("12_g14r7"), ExtResource("14_xjsyx"), ExtResource("9_vxrq8"), ExtResource("21_tit7x"), ExtResource("15_tujst"), ExtResource("18_t6gnk"), ExtResource("17_kh840"), ExtResource("16_5xydy"), ExtResource("17_fkdiq"), ExtResource("20_o66s4"), ExtResource("19_236gv"), ExtResource("22_dt1ji"), ExtResource("23_p6ku7"), ExtResource("10_e0n1q")])
-audioStreams = Array[AudioStream]([ExtResource("25_no0ea"), ExtResource("26_c1f5q"), ExtResource("28_fg6jk"), ExtResource("10_ot4cl"), ExtResource("35_dy1iv"), ExtResource("29_ee3tt"), ExtResource("32_wsg21"), ExtResource("33_rvd1u"), ExtResource("31_w135n"), ExtResource("30_s8itx"), ExtResource("34_ui3q3"), ExtResource("33_22rt7"), ExtResource("36_b3rjt"), ExtResource("37_ncfbp"), ExtResource("12_58ilu")])
+audio = Array[ExtResource("11_i4whs")]([SubResource("Resource_klm84"), SubResource("Resource_t68ku"), SubResource("Resource_gjlsf"), SubResource("Resource_t8v12"), SubResource("Resource_xglw0"), SubResource("Resource_1ngmq"), SubResource("Resource_312fc"), SubResource("Resource_2jxbx"), SubResource("Resource_0k3ah"), SubResource("Resource_r12di"), SubResource("Resource_erniw"), SubResource("Resource_vapd8"), SubResource("Resource_uf165"), SubResource("Resource_lj6yy"), SubResource("Resource_a0ddc"), SubResource("Resource_d68rd"), SubResource("Resource_psayn"), SubResource("Resource_iwo2o")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]

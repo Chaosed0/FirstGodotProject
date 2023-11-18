@@ -30,7 +30,7 @@ You get out of bed feeling energized and ready to get to work.
 
 - You arrive at work, and walk to your desk.
 
-Your coworkers have already arrived at work, and they are chatting about the baking show. Your coworkers are running a fantasy league with the contestants in the show - kind of like fantasy football, but for baking. They are debating over their favorites.
+Your coworkers have already arrived at work, and they are chatting about the baking show. They're running a fantasy league based on the show - kind of like fantasy football, but for baking. They are debating over their favorites.
 
 * [Engage with the conversation.]
     You join in the conversation. {watched_baking_show: Since you watched the baking show last night, you're all up-to-date on who's in and who's out. You personally support the delightful Sri Lankan woman who always has a giggle ready.|You ask your coworkers to update you on who's in and who's out. They tell you all about the hearing-impaired girl who's the dark horse contestant this year.}
@@ -90,7 +90,7 @@ You start discussing a particularly contentious part of the combat design in Dog
 
 You walk to the bus stop. You end up having to wait twenty minutes for the next bus. Sometimes a bus in the schedule is mysteriously skipped, and you have no idea why. It puts you in a bit of a bad mood.
 
-Nevertheless, when the bus gets there, you get on without complaint. Don't complain at bus drivers - it does no one any good.
+Nevertheless, when the bus gets there, you get on without complaint. Don't yell at bus drivers - it does no one any good.
 
 -> common_bus_ride ->
 

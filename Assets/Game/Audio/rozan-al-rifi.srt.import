@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://bs6akl6u23mah"
+path="res://.godot/imported/rozan-al-rifi.srt-817dca478dbc1516f2cb11cc1c74f82d.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/rozan-al-rifi.srt"
+dest_files=["res://.godot/imported/rozan-al-rifi.srt-817dca478dbc1516f2cb11cc1c74f82d.res"]
+
+[params]
+

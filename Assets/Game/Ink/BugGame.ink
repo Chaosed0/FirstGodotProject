@@ -40,7 +40,7 @@ It is {get_time()}. You're trying to solve a bug.
 === localization_bug ===
  ~ temp wtf_stew = false
  ~ bug1_name = LIST_RANDOM(bug1_names)
- ~ bug1_description = "{~a stone door|a newt|a toad|a sword}"
+ ~ bug1_description = "{~a stone door|a newt|a toad|a unicorn|a white wall|TEMP DESCRIPTION CORRECT ME}"
 
  On this bug, QA says that the description for the {get_bug1_name()} says that it's "{bug1_description}".
  
@@ -210,7 +210,9 @@ You flip back in the pages of your brain. You've definitely seen a bug from QA a
     ->->
  + {CHOICE_COUNT() == 0} [You've run out of things to try.]
     You tried everything you could, but sometimes a crash simply can't be fixed until you get more data. What a waste.
-    ->->
+    
+    ++ [On to the next bug.]
+    -- ->->
  
  - -> re_crash_choices
 
@@ -430,7 +432,7 @@ You lean back. Your head is heavy. You've just wasted 30 minutes, and now you ha
   
   ~ temp random_max = RANDOM(2, 10)
   ~ random_max = random_max * random_max
-  ~ temp repro_max = 10
+  ~ temp repro_max = 20
   
   - (try_repro_options)
   
@@ -486,6 +488,9 @@ You lean back. Your head is heavy. You've just wasted 30 minutes, and now you ha
     }
     
     ~ bug_count--
+    
+    -
+    + [On to the next bug.]
     
     ->->
         

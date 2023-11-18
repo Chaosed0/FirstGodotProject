@@ -63,10 +63,11 @@ The founder of your small company is at the table, and he agrees. He talks hard 
 
 * [You're feeling proud of the work that you've been putting in.]
 
-- You feel really good about the work you've been doing. You think folks will be able to see the amount of love put into the game, and they'll appreciate it.
+You feel really good about the work you've been doing. You think folks will be able to see the amount of love put into the game, and they'll appreciate it.
 
 Everyone around the table nods. They're excited for people to finally see the work they've been doing.
 
+-
 * [Finish up your food.]
 
 - It's {get_time()}. You have until {get_time_custom(break_time)}, to get as much work done as you can. You have to leave a little early to get to the game's launch party on time.
@@ -132,7 +133,11 @@ Your partner notices, and she pushes you to go talk to some people. She can hand
     
 * ->
 
-- Suddenly, there is a small clamour at the front of the room. "Speech!" They're chanting. The creative director is up there, looking a little embarrased. Everyone turns towards him, and he clears his throat.
+- Suddenly, there is a small clamour at the front of the room.
+
+* [Look up at the front. What's happening?]
+
+- "Speech!" They're chanting. The creative director is up there, looking a little embarrased. Everyone turns towards him, and he clears his throat.
 
 "Kind of hard to believe this is real, after four and a half years," he says. "We've finally made it. We're finally going to release Dog with a Sword."
 

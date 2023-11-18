@@ -1,0 +1,14 @@
+[remap]
+
+importer="net.straypixels.srtimporter"
+type="Resource"
+uid="uid://cy342fxovol32"
+path="res://.godot/imported/dr-hammam-alloh.srt-f19f6cf6dce82f89c6179fd2fa6a2a5a.res"
+
+[deps]
+
+source_file="res://Assets/Game/Audio/dr-hammam-alloh.srt"
+dest_files=["res://.godot/imported/dr-hammam-alloh.srt-f19f6cf6dce82f89c6179fd2fa6a2a5a.res"]
+
+[params]
+

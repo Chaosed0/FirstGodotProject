@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,325 --> 00:00:04,166
-Sam Husseini: Does the US recognize the Geneva Conventions
+[i]Sam Husseini:[/i] Does the US recognize the Geneva Conventions
 
 2
 00:00:04,373 --> 00:00:07,079
@@ -8,7 +8,7 @@ as applying to Palestinian territories?
 
 3
 00:00:07,278 --> 00:00:09,114
-Vedant Patel: Sam what I'm just gonna say is
+[i]Vedant Patel:[/i] Sam what I'm just gonna say is
 
 4
 00:00:09,146 --> 00:00:10,241

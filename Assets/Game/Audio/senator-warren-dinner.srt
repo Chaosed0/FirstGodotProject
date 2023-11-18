@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,158 --> 00:00:02,873
-Senator Warren? Um, hi
+[i]Woman:[/i] Senator Warren? Um, hi
 
 2
 00:00:03,183 --> 00:00:06,383
@@ -8,11 +8,11 @@ I'm a refugee from Gaza and a constituent of yours
 
 3
 00:00:06,897 --> 00:00:08,577
-Warren: I'm having dinner.
+[i]Warren:[/i] I'm having dinner.
 
 4
 00:00:09,752 --> 00:00:12,086
-68 members of my family were killed
+[i]Woman:[/i] 68 members of my family were killed
 
 5
 00:00:12,103 --> 00:00:13,387
@@ -68,5 +68,5 @@ you are refusing to call for a ceasefire
 
 18
 00:00:33,095 --> 00:00:37,191
-Man: I don't think this is the proper place for this -
+[i]Man:[/i] I don't think this is the proper place for this -
 

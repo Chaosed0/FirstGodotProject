@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,024 --> 00:00:02,490
-I'm a medical doctor. I'm a civilian.
+[i]Dr. Mads Gilbert:[/i] I'm a medical doctor. I'm a civilian.
 
 2
 00:00:02,714 --> 00:00:05,381

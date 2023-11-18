@@ -5,8 +5,7 @@ extends Node
 @export var player : AudioStreamPlayer
 @export var leftLabel : RichTextLabel
 @export var rightLabel : RichTextLabel
-@export var srtFiles : Array[ImportedSRTFile]
-@export var audioStreams : Array[AudioStream]
+@export var audio : Array[AudioPair]
 
 var _currentSrtFile : ImportedSRTFile
 var _currentAudioStream : AudioStream
@@ -29,8 +28,8 @@ func _ready():
 
 func play_audio():
 	_currentSubtitleIndex = 0
-	_currentSrtFile = srtFiles[_currentAudioIndex]
-	_currentAudioStream = audioStreams[_currentAudioIndex]
+	_currentSrtFile = audio[_currentAudioIndex].subtitles
+	_currentAudioStream = audio[_currentAudioIndex].audio
 
 	player.stream = _currentAudioStream
 	player.play(0.0)
@@ -39,10 +38,19 @@ func _input(ev):
 	if ev is InputEventKey:
 		var t_ev : InputEventKey = ev
 
-		print(t_ev)
 		if t_ev.keycode == KEY_HOME && !t_ev.echo && t_ev.pressed:
 			player.stop()
 			on_finished_playing()
+
+		if t_ev.keycode == KEY_PAGEUP && !t_ev.echo && t_ev.pressed:
+			player.pitch_scale += 1
+			var effect : AudioEffectPitchShift = AudioServer.get_bus_effect(0, 0)
+			effect.pitch_scale = 1.0 / player.pitch_scale
+
+		if t_ev.keycode == KEY_PAGEDOWN && !t_ev.echo && t_ev.pressed:
+			player.pitch_scale -= 1
+			var effect : AudioEffectPitchShift = AudioServer.get_bus_effect(0, 0)
+			effect.pitch_scale = 1.0 / player.pitch_scale
 
 func _process(_delta):
 	if _currentSrtFile == null || _currentAudioStream == null:
@@ -75,7 +83,7 @@ func _process(_delta):
 
 func on_finished_playing():
 	await get_tree().create_timer(1.0).timeout
-	_currentAudioIndex = (_currentAudioIndex + 1) % srtFiles.size()
+	_currentAudioIndex = (_currentAudioIndex + 1) % audio.size()
 
 	if _currentAudioIndex % 2 == 0:
 		_leftNonEffectText = str(_leftNonEffectText, " ", _leftCurrentEffectText)

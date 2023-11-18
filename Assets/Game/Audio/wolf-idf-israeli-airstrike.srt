@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,643 --> 00:00:02,166
-Wolf Blitzer: Back down to our breaking news
+[i]CNN anchor Wolf Blitzer:[/i] Back down to our breaking news
 
 2
 00:00:02,229 --> 00:00:03,174
@@ -64,7 +64,7 @@ about how this explosion happened?
 
 17
 00:00:29,636 --> 00:00:31,716
-Richard: Hi Wolf, thanks for having me. So,
+[i]Richard:[/i] Hi Wolf, thanks for having me. So,
 
 18
 00:00:31,731 --> 00:00:33,509
@@ -112,7 +112,7 @@ coming out with more data as we learn what happened here.
 
 29
 00:00:56,069 --> 00:00:58,656
-Wolf: So can you confirm it was an Israeli attack
+[i]Wolf:[/i] So can you confirm it was an Israeli attack
 
 30
 00:00:58,719 --> 00:01:00,417
@@ -124,7 +124,7 @@ of that Jabaliya refugee camp?
 
 32
 00:01:04,880 --> 00:01:06,400
-Richard: Yes I can.
+[i]Richard:[/i] Yes I can.
 
 33
 00:01:07,183 --> 00:01:10,620
@@ -144,7 +144,7 @@ with more data as the hour moves ahead.
 
 37
 00:01:21,034 --> 00:01:23,764
-Wolf: But even if that, uh, Hamas commander
+[i]Wolf:[/i] But even if that, uh, Hamas commander
 
 38
 00:01:23,850 --> 00:01:26,611
@@ -176,7 +176,7 @@ presumably, would be killed - is that what I'm hearing?
 
 45
 00:01:45,886 --> 00:01:47,384
-Richard: That's not what you're hearing, Wolf.
+[i]Richard:[/i] That's not what you're hearing, Wolf.
 
 46
 00:01:47,413 --> 00:01:50,213
@@ -212,7 +212,7 @@ and we'll give you more data as the hour moves ahead.
 
 54
 00:02:09,050 --> 00:02:11,088
-Wolf: But you know that there are a lot of refugees -
+[i]Wolf:[/i] But you know that there are a lot of refugees -
 
 55
 00:02:11,113 --> 00:02:12,722
@@ -228,7 +228,7 @@ in that refugee camp as well, right?
 
 58
 00:02:17,895 --> 00:02:20,331
-Richard: This is the tragedy of war, Wolf.
+[i]Richard:[/i] This is the tragedy of war, Wolf.
 
 59
 00:02:20,755 --> 00:02:22,555
@@ -252,7 +252,7 @@ We, uh -
 
 64
 00:02:28,562 --> 00:02:30,355
-Wolf: Just trying to get a little more information.
+[i]Wolf:[/i] Just trying to get a little more information.
 
 65
 00:02:30,406 --> 00:02:31,835
@@ -284,7 +284,7 @@ by the way, was he killed?
 
 72
 00:02:44,102 --> 00:02:46,907
-I can't confirm yet, there'll be more, uh, updated -
+[i]Richard:[/i] I can't confirm yet, there'll be more, uh, updated -
 
 73
 00:02:46,995 --> 00:02:49,062
@@ -292,7 +292,7 @@ he, yes, we know that he was killed.
 
 74
 00:02:50,691 --> 00:02:52,013
-about the civilians there,
+About the civilians there,
 
 75
 00:02:52,047 --> 00:02:53,819
