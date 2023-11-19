@@ -1,8 +1,8 @@
 [remap]
 
-importer="ink"
+importer="inkgd.ink"
 type="Resource"
-uid="uid://cyj1g3um08ojn"
+uid="uid://dghag8plrs882"
 path="res://.godot/imported/Functions.ink-1de5a2f1335d63853d946989e731d046.res"
 
 [deps]
@@ -12,5 +12,3 @@ dest_files=["res://.godot/imported/Functions.ink-1de5a2f1335d63853d946989e731d04
 
 [params]
 
-is_main_file=false
-compress=true

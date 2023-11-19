@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://s5vfh7todm0d"]
+[gd_scene load_steps=14 format=3 uid="uid://s5vfh7todm0d"]
 
 [ext_resource type="PackedScene" uid="uid://dxrhutva3blca" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/floor_wood_large.gltf.glb" id="1_6138h"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="2_h27oj"]
@@ -9,6 +9,179 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3cvan"]
 size = Vector3(60, 2, 60)
+
+[sub_resource type="Animation" id="Animation_37d3f"]
+resource_name = "die"
+length = 0.416667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.86265e-09, -0.36787, -2.32831e-10)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 0.878331, 1, 0.0333333, 1, 1, 0.870289, 1, 0.0666667, 1, 1, 0.850127, 1, 0.1, 1, 1, 0.81835, 1, 0.133333, 1, 1, 0.775969, 1, 0.166667, 1, 1, 0.724499, 1, 0.233333, 1, 1, 0.607885, 1, 0.266667, 1, 1, 0.552996, 1, 0.3, 1, 1, 0.504556, 1, 0.333333, 1, 1, 0.465205, 1, 0.366667, 1, 1, 0.441002, 1, 0.4, 1, 1, 0.428921, 1, 0.416667, 1, 1, 0.4249, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:Cap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_plika"]
+resource_name = "dodgeL"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.182046, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0384881, 0.00893376, 0.0899637, 0.995161)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 1, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:Cap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 9.99903e-10, 6.86691e-10, -0.0894271, 0.995993)
+
+[sub_resource type="Animation" id="Animation_3ff62"]
+resource_name = "dodgeR"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.182046, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.0433441, 0.0121687, -0.181644, 0.982333)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 0.995194, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:Cap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.0107413, -0.0226003, 0.171377, 0.984888)
+
+[sub_resource type="Animation" id="Animation_dgyu1"]
+resource_name = "idle"
+length = 1.25
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.86265e-09, -0.36787, -2.32831e-10)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.0333333, 1, 1, 0.999044, 1, 0.0666667, 1, 1, 0.996639, 1, 0.1, 1, 1, 0.99279, 1, 0.133333, 1, 1, 0.987529, 1, 0.166667, 1, 1, 0.980903, 1, 0.2, 1, 1, 0.972669, 1, 0.233333, 1, 1, 0.963478, 1, 0.266667, 1, 1, 0.953555, 1, 0.3, 1, 1, 0.943148, 1, 0.333333, 1, 1, 0.932527, 1, 0.366667, 1, 1, 0.922192, 1, 0.4, 1, 1, 0.912476, 1, 0.433333, 1, 1, 0.903603, 1, 0.466667, 1, 1, 0.895771, 1, 0.5, 1, 1, 0.889146, 1, 0.533333, 1, 1, 0.884339, 1, 0.566667, 1, 1, 0.88097, 1, 0.6, 1, 1, 0.879048, 1, 0.666667, 1, 1, 0.87951, 1, 0.7, 1, 1, 0.882363, 1, 0.733333, 1, 1, 0.886637, 1, 0.766667, 1, 1, 0.892282, 1, 0.8, 1, 1, 0.899221, 1, 0.833333, 1, 1, 0.907352, 1, 0.866667, 1, 1, 0.916744, 1, 0.9, 1, 1, 0.926746, 1, 0.966667, 1, 1, 0.94751, 1, 1, 1, 1, 0.957716, 1, 1.03333, 1, 1, 0.967107, 1, 1.06667, 1, 1, 0.975554, 1, 1.1, 1, 1, 0.98289, 1, 1.13333, 1, 1, 0.988984, 1, 1.16667, 1, 1, 0.993731, 1, 1.2, 1, 1, 0.996584, 1, 1.23333, 1, 1, 0.998005, 1, 1.25, 1, 1, 0.998477, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:Cap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_yrodb"]
+resource_name = "move"
+length = 0.833333
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.261785, 0, 0.0333333, 1, 0, -0.222569, 0, 0.0666667, 1, 0, -0.12992, 0, 0.1, 1, 0, -0.0037757, 0, 0.133333, 1, 0, 0.130211, 0, 0.166667, 1, 0, 0.240671, 0, 0.2, 1, 0, 0.279887, 0, 0.233333, 1, 0, 0.262204, 0, 0.266667, 1, 0, 0.192265, 0, 0.3, 1, 0, 0.0817079, 0, 0.333333, 1, 0, -0.0508365, 0, 0.366667, 1, 0, -0.154065, 0, 0.4, 1, 0, -0.207359, 0, 0.433333, 1, 0, -0.207359, 0, 0.466667, 1, 0, -0.154065, 0, 0.5, 1, 0, -0.0508365, 0, 0.533333, 1, 0, 0.0817081, 0, 0.566667, 1, 0, 0.192265, 0, 0.6, 1, 0, 0.262204, 0, 0.633333, 1, 0, 0.279988, 0, 0.666667, 1, 0, 0.241178, 0, 0.7, 1, 0, 0.131861, 0, 0.733333, 1, 0, -0.000740409, 0, 0.766667, 1, 0, -0.12558, 0, 0.8, 1, 0, -0.21727, 0, 0.833333, 1, 0, -0.256081, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.00533096, -0.00519876, 0.074005, 0.99723, 0.0333333, 1, 0.00495185, -0.00506322, 0.0713956, 0.997423, 0.0666667, 1, 0.00405632, -0.00466634, 0.0643627, 0.997907, 0.1, 1, 0.00283699, -0.0039762, 0.0530899, 0.998578, 0.133333, 1, 0.00154173, -0.00299558, 0.0383104, 0.99926, 0.166667, 1, 0.000473872, -0.00176234, 0.0213122, 0.999771, 0.2, 1, 9.47812e-05, -0.000352495, 0.00426275, 0.999991, 0.233333, 1, 0.000330656, 0.00147079, -0.0158613, 0.999873, 0.266667, 1, 0.00117261, 0.00384524, -0.0407172, 0.999163, 0.333333, 1, 0.00409816, 0.00954544, -0.0981847, 0.995114, 0.366667, 1, 0.00533795, 0.0115758, -0.118172, 0.992911, 0.4, 1, 0.00597708, 0.0125949, -0.128164, 0.991655, 0.433333, 1, 0.00597708, 0.0125949, -0.128164, 0.991655, 0.466667, 1, 0.00533795, 0.0115758, -0.118172, 0.992911, 0.5, 1, 0.00409816, 0.00954544, -0.0981847, 0.995114, 0.533333, 1, 0.00250351, 0.00665771, -0.0693458, 0.997567, 0.566667, 1, 0.00117261, 0.00384523, -0.0407171, 0.999163, 0.6, 1, 0.000330654, 0.00147079, -0.0158613, 0.999873, 0.633333, 1, 9.47811e-05, -0.000352494, 0.00426275, 0.999991, 0.7, 1, 0.00154173, -0.00299558, 0.0383104, 0.99926, 0.733333, 1, 0.00283699, -0.0039762, 0.0530899, 0.998578, 0.766667, 1, 0.00405632, -0.00466634, 0.0643628, 0.997908, 0.8, 1, 0.00495185, -0.00506322, 0.0713956, 0.997423, 0.833333, 1, 0.00533096, -0.00519876, 0.074005, 0.99723)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D:Stalk")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 1, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D:Cap")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.000689966, 0.000609898, 0.0618305, 0.998086, 0.0333333, 1, 0.000640916, 0.000582966, 0.0591956, 0.998246, 0.0666667, 1, 0.000525027, 0.000513949, 0.052393, 0.998626, 0.1, 1, 0.000367212, 0.00040945, 0.0420023, 0.999117, 0.133333, 1, 0.000199556, 0.000281068, 0.0291022, 0.999576, 0.166667, 1, 6.13336e-05, 0.000145424, 0.0152726, 0.999883, 0.2, 1, 1.22672e-05, 2.90858e-05, 0.00305464, 0.999995, 0.233333, 1, 0.00010846, -9.00507e-05, -0.00984125, 0.999952, 0.266667, 1, 0.000384485, -0.000223164, -0.0245902, 0.999698, 0.3, 1, 0.000820806, -0.000367627, -0.0408349, 0.999166, 0.333333, 1, 0.00134381, -0.000507032, -0.0566885, 0.998391, 0.366667, 1, 0.00175097, -0.000600532, -0.06742, 0.997723, 0.4, 1, 0.0019611, -0.000646868, -0.0727528, 0.997348, 0.433333, 1, 0.0019611, -0.000646867, -0.0727527, 0.997348, 0.466667, 1, 0.00175097, -0.000600532, -0.06742, 0.997723, 0.5, 1, 0.00134381, -0.000507032, -0.0566885, 0.998391, 0.533333, 1, 0.000820805, -0.000367627, -0.0408349, 0.999166, 0.566667, 1, 0.000384484, -0.000223164, -0.0245902, 0.999698, 0.6, 1, 0.00010846, -9.00505e-05, -0.00984123, 0.999952, 0.633333, 1, 1.22672e-05, 2.90858e-05, 0.00305464, 0.999995, 0.666667, 1, 6.13336e-05, 0.000145424, 0.0152726, 0.999883, 0.7, 1, 0.000199556, 0.000281068, 0.0291022, 0.999576, 0.733333, 1, 0.000367212, 0.00040945, 0.0420023, 0.999117, 0.766667, 1, 0.000525027, 0.000513949, 0.0523929, 0.998626, 0.8, 1, 0.000640916, 0.000582965, 0.0591956, 0.998246, 0.833333, 1, 0.000689966, 0.000609898, 0.0618305, 0.998086)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlquo"]
+_data = {
+"die": SubResource("Animation_37d3f"),
+"dodgeL": SubResource("Animation_plika"),
+"dodgeR": SubResource("Animation_3ff62"),
+"idle": SubResource("Animation_dgyu1"),
+"move": SubResource("Animation_yrodb")
+}
 
 [node name="Main" type="Node"]
 
@@ -58,10 +231,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729645, 0)
 [node name="Skeleton3D" parent="Player/Pivot/shroom/Armature" index="0"]
 bones/0/position = Vector3(-1.86265e-09, -0.36787, -2.32831e-10)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
-bones/0/scale = Vector3(1, 0.990495, 1)
+bones/0/scale = Vector3(1, 0.944138, 1)
 bones/1/rotation = Quaternion(0, 0, 0, 1)
 
 [node name="AnimationTree" parent="Player/Pivot" index="1"]
+root_node = NodePath("../shroom")
+libraries = {
+"": SubResource("AnimationLibrary_vlquo")
+}
 parameters/Movement/MoveBlend/blend_amount = 0
 
 [node name="PhantomCamera3D" type="Node3D" parent="."]

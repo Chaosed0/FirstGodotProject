@@ -1,9 +1,8 @@
-[gd_scene load_steps=68 format=3 uid="uid://rx5mrmc2csae"]
+[gd_scene load_steps=69 format=3 uid="uid://rx5mrmc2csae"]
 
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryInitializer.gd" id="1_frdli"]
 [ext_resource type="Theme" uid="uid://dspuh7p7f5rfg" path="res://Assets/Game/UI/StoryTheme.tres" id="1_x8d7b"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryUI.gd" id="2_0w2o0"]
-[ext_resource type="Resource" uid="uid://dmyik7dh62b1h" path="res://Assets/Game/Ink/story.ink" id="3_01yio"]
 [ext_resource type="PackedScene" uid="uid://l8fr2ijwelce" path="res://Assets/Game/UI/StoryText.tscn" id="4_14l7b"]
 [ext_resource type="PackedScene" uid="uid://468bgu5ql3da" path="res://Assets/Game/UI/StoryChoice.tscn" id="5_21upg"]
 [ext_resource type="PackedScene" uid="uid://ddr4ip2rrsuk8" path="res://Assets/Game/UI/StorySeparator.tscn" id="6_3m0a7"]
@@ -45,7 +44,9 @@
 [ext_resource type="AudioStream" uid="uid://dlcuq6rw80ed8" path="res://Assets/Game/Audio/dr-hammam-alloh.ogg" id="43_em6ts"]
 [ext_resource type="Resource" uid="uid://cy342fxovol32" path="res://Assets/Game/Audio/dr-hammam-alloh.srt" id="44_kk8cb"]
 [ext_resource type="AudioStream" uid="uid://buh42jbs72qdy" path="res://Assets/Game/Audio/fadi-conditions-gaza.ogg" id="45_fhyy0"]
+[ext_resource type="Script" path="res://addons/inkgd/ink_player.gd" id="46_57prh"]
 [ext_resource type="Resource" uid="uid://ccwchsvar2jul" path="res://Assets/Game/Audio/fadi-conditions-gaza.srt" id="46_q2tdm"]
+[ext_resource type="Resource" uid="uid://cjdc7rto2ogy7" path="res://Assets/Game/Ink/story.ink.json" id="47_y62fx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl40i"]
 bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
@@ -146,12 +147,13 @@ script = ExtResource("11_i4whs")
 audio = ExtResource("45_fhyy0")
 subtitles = ExtResource("46_q2tdm")
 
-[node name="Story" type="Node" node_paths=PackedStringArray("skipButton")]
+[node name="Story" type="Node" node_paths=PackedStringArray("_storyUI", "skipButton")]
 script = ExtResource("1_frdli")
+_storyUI = NodePath("HUD/StoryUI")
 knot_path = "Main"
 skip_knot_path = "GameLaunch"
 skipButton = NodePath("HUD/StoryUI/SkipButton")
-skipTime = 75.0
+skipTime = 1.0
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -171,7 +173,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wl40i")
 
-[node name="StoryUI" type="Panel" parent="HUD" node_paths=PackedStringArray("bottomSpacer", "scrollContainer", "content", "container") groups=["StoryUI"]]
+[node name="StoryUI" type="Panel" parent="HUD" node_paths=PackedStringArray("story", "bottomSpacer", "scrollContainer", "content", "container") groups=["StoryUI"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -183,7 +185,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kk1fi")
 script = ExtResource("2_0w2o0")
-story = ExtResource("3_01yio")
+story = NodePath("../../InkPlayer")
 textScene = ExtResource("4_14l7b")
 choiceScene = ExtResource("5_21upg")
 separator = ExtResource("6_3m0a7")
@@ -323,3 +325,8 @@ rightLabel = NodePath("../SubtitleRight")
 audio = Array[ExtResource("11_i4whs")]([SubResource("Resource_klm84"), SubResource("Resource_t68ku"), SubResource("Resource_gjlsf"), SubResource("Resource_t8v12"), SubResource("Resource_xglw0"), SubResource("Resource_1ngmq"), SubResource("Resource_312fc"), SubResource("Resource_2jxbx"), SubResource("Resource_0k3ah"), SubResource("Resource_r12di"), SubResource("Resource_erniw"), SubResource("Resource_vapd8"), SubResource("Resource_uf165"), SubResource("Resource_lj6yy"), SubResource("Resource_a0ddc"), SubResource("Resource_d68rd"), SubResource("Resource_psayn"), SubResource("Resource_iwo2o")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/TestSRTReader"]
+
+[node name="InkPlayer" type="Node" parent="."]
+script = ExtResource("46_57prh")
+ink_file = ExtResource("47_y62fx")
+loads_in_background = false

@@ -166,3 +166,7 @@ EXTERNAL shuffle_next_choices()
 EXTERNAL begin_audio()
 === function begin_audio() ===
     < DEBUG > AUDIO SHOULD BEGIN
+        
+EXTERNAL quit_game()
+=== function quit_game() ===
+    < DEBUG > GAME SHOULD QUIT

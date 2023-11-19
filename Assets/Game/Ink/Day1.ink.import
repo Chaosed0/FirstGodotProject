@@ -1,8 +1,8 @@
 [remap]
 
-importer="ink"
+importer="inkgd.ink"
 type="Resource"
-uid="uid://behwl7uj401ah"
+uid="uid://gqig6yxtdlrd"
 path="res://.godot/imported/Day1.ink-dc7fa1513ae4c093ffa19f771f143c3f.res"
 
 [deps]
@@ -12,5 +12,3 @@ dest_files=["res://.godot/imported/Day1.ink-dc7fa1513ae4c093ffa19f771f143c3f.res
 
 [params]
 
-is_main_file=false
-compress=true

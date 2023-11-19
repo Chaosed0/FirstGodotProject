@@ -45,9 +45,9 @@ Later that weekend, after the release, you have a call with your activist friend
 - (call_to_action)
 
 * [Call your US state representatives and support a ceasefire.]
-# LINK: https:\/\/act.uscpr.org\/a\/callforgaza
 A link has been opened.
 If you are not in the US, please call any relevant government representative.
+# LINK: https:\/\/act.uscpr.org\/a\/callforgaza
 -> call_to_action
 * [Donate to organizations sending aid to Palestine.]
 A link has been opened.
@@ -76,4 +76,22 @@ A link has been opened.
 -
 * [Clicking this will quit the game. Thank you for playing.]
 
-- ->->
+-
+~ quit_game()
+
+Thank you for playing.
+
+* [Dummy]
+
+-> END
+
+
+
+
+
+
+
+
+
+
+

@@ -10,13 +10,23 @@ config_version=5
 
 [application]
 
-config/name="My First Project"
+config/name="Man with a Hammer"
 run/main_scene="res://Assets/Game/Story.tscn"
-config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+__InkRuntime="*res://addons/inkgd/runtime/static/ink_runtime.gd"
+
+[debug]
+
+settings/gdscript/max_call_stack=2047
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -25,7 +35,11 @@ project/assembly_name="My First Project"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/srt_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/inkgd/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/srt_importer/plugin.cfg")
+
+[inkgd]
+
+register_templates=true
 
 [input]
 

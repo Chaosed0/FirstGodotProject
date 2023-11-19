@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Assets/Game/Scripts/InteractionHud.gd" id="1_q28ff"]
 [ext_resource type="Script" path="res://Assets/Game/Scripts/StoryUI.gd" id="2_80yve"]
 [ext_resource type="PackedScene" uid="uid://l8fr2ijwelce" path="res://Assets/Game/UI/StoryText.tscn" id="3_4iwxd"]
-[ext_resource type="Resource" uid="uid://dmyik7dh62b1h" path="res://Assets/Game/Ink/story.ink" id="4_gesdn"]
 [ext_resource type="PackedScene" uid="uid://468bgu5ql3da" path="res://Assets/Game/UI/StoryChoice.tscn" id="4_h3umm"]
 [ext_resource type="PackedScene" uid="uid://ddr4ip2rrsuk8" path="res://Assets/Game/UI/StorySeparator.tscn" id="5_4jhfo"]
 
@@ -49,7 +48,6 @@ offset_left = -467.0
 grow_horizontal = 0
 grow_vertical = 2
 script = ExtResource("2_80yve")
-story = ExtResource("4_gesdn")
 textScene = ExtResource("3_4iwxd")
 choiceScene = ExtResource("4_h3umm")
 separator = ExtResource("5_4jhfo")
